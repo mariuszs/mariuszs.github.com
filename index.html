@@ -36,7 +36,10 @@
           <h2>
 <a name="shell" class="anchor" href="#shell"><span class="octicon octicon-link"></span></a>Shell</h2>
 
-<p>Używam <a href="https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish">Informative git prompta</a> z powłoką <a href="http://fishshell.com/">Fish shell</a>.</p>
+<p>Używam <a href="https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish">informative git prompta</a> z powłoką <a href="http://fishshell.com/">Fish shell</a>.
+Na temat informative git prompta można poczytać na stronie projektu <a href="https://github.com/mariuszs/informative_git_prompt">Informative GIT Prompt for Fish shell</a>,
+    akutalnie ten prompt jest już wbudowany w fisha i nie wymaga dodatkowej instalacji.</p>
+
 
 <p>Konfiguracja mojego prompta <code>~/.config/fish/config.fish
 </code> wygląda jak poniżej</p>
@@ -69,16 +72,7 @@ set -g __fish_git_prompt_color_cleanstate green bold
  </p>
 <p>Moja fishowa krowa:</p>
 
-<pre><code> ________________________________________
-&lt; Beat me, whip me, make me use Windows! &gt;
- ----------------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-~/git $
-</code></pre>
+<img src="https://raw.github.com/mariuszs/informative_git_prompt/master/shell.png"/>
           <p>Konfiguracja krowy jest następująca:</p>
 
 <pre><code>if status --is-interactive
