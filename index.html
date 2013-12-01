@@ -28,14 +28,22 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="mariuszsgithubcom" class="anchor" href="#mariuszsgithubcom"><span class="octicon octicon-link"></span></a>mariuszs.github.com</h1>
+<a name="mariuszsgithubcom" class="anchor" href="#mariuszsgithubcom"><span class="octicon octicon-link"></span></a>Intro</h1>
 
-<h2>
+          <p><a href="http://www.youtube.com/watch?v=WOPE0H-o3Uo">Olejmy Jutro!</a> - Chce żebym obiecał Jej że zawsze będzie <code>git</code></p>
+
+          <h1>Git Kata v2</h1>
+
+          <p>Będę opowiadał na Git Kacie o TIGu</p>
+
+          <h1>My środowisko pracy</h1>
+
+          <h2>
 <a name="shell" class="anchor" href="#shell"><span class="octicon octicon-link"></span></a>Shell</h2>
 
-<p>I'm using <a href="https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish">Informative git prompt</a> in <a href="http://fishshell.com/">Fish shell</a>.</p>
+<p>Używam <a href="https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish">Informative git prompta</a> z powłoką <a href="http://fishshell.com/">Fish shell</a>.</p>
 
-<p>My prompt configuration (select <em>informative git prompt</em> from <a href="http://fishshell.com/docs/current/commands.html#fish_config">fish_config</a>!):</p>
+<p>Konfiguracja mojego prompta wygląda jak poniżej</p>
 
 <pre><code>set -g __fish_git_prompt_show_informative_status 1
 
@@ -60,14 +68,9 @@ set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
 </code></pre>
 
-<p>My fish cow</p>
-
-<pre><code>if status --is-interactive
-    command fortune -s | cowsay
-end
-</code></pre>
-
-<p>looks like this</p>
+ <p>Aktywuj prompta <em>informative git prompt</em> z panelu konfiguracyjnego dostępnego po uruchomieniu polecenia <a href="http://fishshell.com/docs/current/commands.html#fish_config">fish_config</a>!
+ </p>
+<p>Moja fishowa krowa wygląda tak</p>
 
 <pre><code> ________________________________________
 &lt; Beat me, whip me, make me use Windows! &gt;
@@ -79,18 +82,27 @@ end
                 ||     ||
 ~/git $
 </code></pre>
+          <p>a konfiguruje się ją tak</p>
+
+<pre><code>if status --is-interactive
+    command fortune -s | cowsay
+end
+</code></pre>
+
+
 
 <h2>
-<a name="editor" class="anchor" href="#editor"><span class="octicon octicon-link"></span></a>Editor</h2>
+<a name="editor" class="anchor" href="#editor"><span class="octicon octicon-link"></span></a>Edytor</h2>
 
-<p>I'm big fan of <a href="http://www.nano-editor.org/">nano editor</a> 2.3.2 with <a href="https://raw.github.com/scopatz/nanorc/master/git.nanorc">syntax highlighting for Git</a>.</p>
+<p>Używam edytorka <a href="http://www.nano-editor.org/">nano</a> w wersji 2.3.2 z konfiguracją <a href="https://raw.github.com/scopatz/nanorc/master/git.nanorc">podświetlania komend gita</a>.
+Jest to jeden z nielicznych edytorów z którego można wyjść bez ukończenia szkolenia :)</p>
 
 <h2>
 <a name="git" class="anchor" href="#git"><span class="octicon octicon-link"></span></a>GIT</h2>
 
-<p>I'm using almost latest GIT (<code>git version 1.8.4.2</code>) supplied by <a href="http://fedoraproject.org/">Fedora</a>.</p>
+<p>Używam prawie najnowszej wersji Gita (<code>git version 1.8.4.2</code>) dostarczanej przez <a href="http://fedoraproject.org/">Fedorę</a>.</p>
 
-<p>Configuration (short version)</p>
+<p>Skrót konfiguracji mojego gita</p>
 
 <pre><code>[user]
     name = Mariusz Smykula
@@ -108,11 +120,11 @@ end
 </code></pre>
 
 <h2>
-<a name="other-tools" class="anchor" href="#other-tools"><span class="octicon octicon-link"></span></a>Other tools</h2>
+<a name="other-tools" class="anchor" href="#other-tools"><span class="octicon octicon-link"></span></a>Pozostałe narzędzia</h2>
 
 <ul>
 <li>
-<a href="http://hub.github.com/">hub</a> - command-line wrapper for github.</li>
+<a href="http://hub.github.com/">hub</a> - command-line wrapper for github</li>
 <li><a href="https://github.com/jakubnabrdalik/gitkurwa">git kurwa</a></li>
 <li><a href="http://gnometerminator.blogspot.com/p/introduction.html">Terminator terminal</a></li>
 <li>
