@@ -3,7 +3,7 @@ plugins {
 }
 
 githubPages {
-    repoUri = 'git@github.com:mariuszs/blog.git'
+    repoUri = 'git@github.com:mariuszs/mariuszs.github.com.git'
     pages {
         from(file('build/jbake')) {
             into '.'
