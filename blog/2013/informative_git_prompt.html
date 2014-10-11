@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 	    <meta charset="utf-8" />
-	    <title>MariuszS</title>
+	    <title>Informative Git Prompt with Fish</title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	    <meta name="description" content="" />
 	    <meta name="author" content="" />
@@ -12,10 +12,10 @@
 	    <meta name="generator" content="JBake" />
 	
 	    <!-- Le styles -->
-	    <link rel="stylesheet" href="css/bootstrap.min.css" />
-	    <link rel="stylesheet" href="css/asciidoctor.css" />
-	    <link rel="stylesheet" href="css/base.css" />
-	    <link rel="stylesheet" href="css/prettify.css" />
+	    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="../../css/asciidoctor.css" />
+	    <link rel="stylesheet" href="../../css/base.css" />
+	    <link rel="stylesheet" href="../../css/prettify.css" />
 	
 	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
 	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"/>
 	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"/>
 	    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"/>-->
-	    <link rel="shortcut icon" href="favicon.ico" />
+	    <link rel="shortcut icon" href="../../favicon.ico" />
 	</head>
 	<body onload="prettyPrint()">
 	<div id="wrap">
@@ -43,13 +43,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" shape="rect" href="">mariuszs.github.io</a>
+          <a class="navbar-brand" shape="rect" href="../../">mariuszs.github.io</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a shape="rect" href="index.html">Home</a></li>
-            <li><a shape="rect" href="about.html">About</a></li>
-            <li><a shape="rect" href="feed.xml">Subscribe</a></li>
+            <li><a shape="rect" href="../../index.html">Home</a></li>
+            <li><a shape="rect" href="../../about.html">About</a></li>
+            <li><a shape="rect" href="../../feed.xml">Subscribe</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -57,51 +57,14 @@
 
 	</div>
 		<div class="container">
+	
 			<div class="page-header">
-				<h1>Blog</h1>
+				<h1>Informative Git Prompt with Fish</h1>
 			</div>
-			
-			<div>
-                <a shape="rect" data-disqus-identifier="blog/2014/fedora-fonts.html" href="blog/2014/fedora-fonts.html#disqus_thread"><h1>Czcionki w Fedorze</h1></a>
-				<p>11 października 2014</p>
-				<p><h2>Czcionki</h2><p>Silnik renderowania czcionek z włączonym renderowaniem subpikselowym - możemy go legalnie używać, ponieważ nie obowiązują w naszym kraju patenty na oprogramowanie.</p>
-<pre><code>sudo yum install freetype-freeworld
-</code></pre><p>Nie polecam korzystania z <a href="http://www.infinality.net/blog/">Infinality</a> projekt najwyraźniej nie jest już dłużej rozwijany (ostatnia wydanie jest z 2013-05-15). Pojawił się za to nowy projekt <a href="http://bohoomil.com/">http://bohoomil.com/</a>, aktualnie bez wsparcia dla Fedory. </p><p><a href="https://code.google.com/p/noto/">Google noto fonts</a></p>
-<pre><code>sudo yum install google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-symbols-fonts  
-</code></pre><p><a href="https://android.googlesource.com/">Google Droid fonts</a></p>
-<pre><code>sudo yum install google-droid-serif-fonts google-droid-sans-mono-fonts google-droid-sans-fonts  
-</code></pre><p><a href="http://www.levien.com/type/myfonts/inconsolata.html">Inconsolata</a></p>
-<pre><code>sudo yum install levien-inconsolata-fonts                  
-</code></pre><h2>Konfiguracja czcionek</h2><p>Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr </p>
-<pre><code>sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
-</code></pre><p>Hinting i wygładzanie RGB</p>
-<pre><code>gsettings &quot;set&quot; &quot;org.gnome.settings-daemon.plugins.xsettings&quot; &quot;hinting&quot; &quot;slight&quot;     
-</code></pre><p>Aby poprawnie ustawić wygładzanie RGB należy <a href="http://www.lagom.nl/lcd-test/subpixel.php">sprawdzić posiadaną matrycę</a>. </p><p>Ustawienie per użytkownika </p>
-<pre><code>gsettings &quot;set&quot; &quot;org.gnome.settings-daemon.plugins.xsettings&quot; &quot;antialiasing&quot; &quot;rgba&quot;    
-</code></pre><p>Ustawienia globalne przez mechanizm fontconfig (zalecane)</p>
-<pre><code>sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/10-sub-pixel-rgb.conf    
-</code></pre><p>W konfiguracji tych opcji można nam pomóc <a href="https://wiki.gnome.org/action/show/Apps/GnomeTweakTool?action=show&redirect=GnomeTweakTool">gnome-tweak-tool</a></p>
-<pre><code>yum install gnome-tweak-tool
-</code></pre><p>Efekt konfiguracji można zweryfikować poleceniem <code>xrdb -query</code> </p>
-<pre><code>Xft.antialias:  1
-Xft.dpi:    120
-Xft.hinting:    1
-Xft.hintstyle:  hintfull
-Xft.lcdfilter:  lcddefault
-Xft.rgba:   rgb
-</code></pre><p>Własne konfiguracje dla czcionek należy umieszczać w katalogu <code>~/.config/fontconfig/conf.d</code> lub pliku <code>~/.config/fontconfig/fonts.conf</code>.</p><h2>Warto poczytać:</h2>
-<ul>
-  <li><a href="https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/">Fonts and font sizes in Fedora on the internet: hold onto your hats…</a></li>
-  <li><a href="http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/">How to get gorgeous looking fonts on ubuntu linux</a></li>
-  <li><a href="http://blog.andreas-haerter.com/2011/07/18/tune-improve-fedora-fonts-typeface-ubuntu-like-sharp-fonts">How to change Fedora's font rendering to get an Ubuntu-like result</a></li>
-  <li><a href="http://wiki.gentoo.org/wiki/Fontconfig">Gentoo Wiki - Fontconfig</a></li>
-</ul></p>
-			</div>
-			
-			<div>
-                <a shape="rect" data-disqus-identifier="blog/2013/informative_git_prompt.html" href="blog/2013/informative_git_prompt.html#disqus_thread"><h1>Informative Git Prompt with Fish</h1></a>
-				<p>03 grudnia 2013</p>
-				<p><div id="preamble">
+		
+			<p><em>03 grudnia 2013</em></p>
+		
+			<p><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>I&#8217;m using <a href="https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish">Informative git prompt</a> with <a href="http://fishshell.com/">Fish shell</a>.</p>
@@ -259,14 +222,27 @@ set -g __fish_git_prompt_color_cleanstate green bold</pre>
 </li>
 </ul>
 </div></p>
-			</div>
-				
+		
 			<hr />
-			
-			<p>Older posts are available in the <a href="archive.html" shape="rect">archive</a>.</p>
-		</div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript" xml:space="preserve">
+                var disqus_shortname = 'mariuszs';
+                var disqus_identifier = 'blog/2013/informative_git_prompt.html';
+                var disqus_title = 'Informative Git Prompt with Fish';
+                var disqus_url = 'http://mariuszs.github.io/blog/2013/informative_git_prompt.html';
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" shape="rect">comments powered by Disqus.</a></noscript>
+
+
+        </div>
 	</div>
-	
 	<div>
 			<div id="push"></div>
     
@@ -279,9 +255,9 @@ set -g __fish_git_prompt_color_cleanstate green bold</pre>
 		    <!-- Le javascript
 		    ================================================== -->
 		    <!-- Placed at the end of the document so the pages load faster -->
-		    <script xml:space="preserve" src="js/jquery-1.11.1.min.js"></script>
-		    <script xml:space="preserve" src="js/bootstrap.min.js"></script>
-		    <script xml:space="preserve" src="js/prettify.js"></script>
+		    <script xml:space="preserve" src="../../js/jquery-1.11.1.min.js"></script>
+		    <script xml:space="preserve" src="../../js/bootstrap.min.js"></script>
+		    <script xml:space="preserve" src="../../js/prettify.js"></script>
     
     	</div>
     </body>
