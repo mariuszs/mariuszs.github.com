@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Mariuszs.github.com : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>mariuszs.github.com</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mariuszs">View on GitHub</a>
+
+          <h1 id="project_title">mariuszs.github.com</h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+          <h1>Git Kata 2</h1>
+
+          <p>Możesz mnie spotkać na <a href="http://v2.gitkata.pl/">Git Kacie</a>. Będę opowiadał o <a href="http://jonas.nitro.dk/tig/">Tigu</a>.</p>
+
+          <h1>Gitowe środowisko pracy</h1>
+
+          <h2>
+<a name="shell" class="anchor" href="#shell"><span class="octicon octicon-link"></span></a>Shell</h2>
+
+<p>Używam <a href="https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish">informative git prompta</a> z powłoką <a href="http://fishshell.com/">Fish shell</a>.
+Na temat informative git prompta można poczytać na stronie projektu <a href="https://github.com/mariuszs/informative_git_prompt">Informative GIT Prompt for Fish shell</a>,
+    akutalnie ten prompt jest już wbudowany w fisha i nie wymaga dodatkowej instalacji.</p>
+
+
+<p>Konfiguracja mojego prompta <code>~/.config/fish/config.fish
+</code> wygląda jak poniżej</p>
+
+
+<pre><code>set -g __fish_git_prompt_show_informative_status 1
+
+set -g __fish_git_prompt_showcolorhints 1
+
+set -g __fish_git_prompt_color_branch magenta bold
+set -g __fish_git_prompt_showupstream "informative"
+set -g __fish_git_prompt_char_upstream_ahead "↑"
+set -g __fish_git_prompt_char_upstream_behind "↓"
+set -g __fish_git_prompt_char_upstream_prefix ""
+
+set -g __fish_git_prompt_char_stagedstate "●"
+set -g __fish_git_prompt_char_dirtystate "✚"
+set -g __fish_git_prompt_char_untrackedfiles "…"
+set -g __fish_git_prompt_char_conflictedstate "✖"
+set -g __fish_git_prompt_char_cleanstate "✔"
+
+set -g __fish_git_prompt_color_dirtystate blue
+set -g __fish_git_prompt_color_stagedstate yellow
+set -g __fish_git_prompt_color_invalidstate red
+set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
+set -g __fish_git_prompt_color_cleanstate green bold
+</code></pre>
+
+ <p><em>Informative git prompta</em> aktywujemy z <a href="http://fishshell.com/assets/img/screenshots/web_config.png">panelu konfiguracyjnego</a> uruchamianego poleceniem <a href="http://fishshell.com/docs/current/commands.html#fish_config">fish_config</a>.
+ </p>
+<p>Moja fishowa krowa:</p>
+
+<img src="https://raw.github.com/mariuszs/informative_git_prompt/master/shell.png"/>
+          <p>Konfiguracja krowy jest następująca:</p>
+
+<pre><code>if status --is-interactive
+    command fortune -s | cowsay
+end
+</code></pre>
+
+
+
+<h2>
+<a name="editor" class="anchor" href="#editor"><span class="octicon octicon-link"></span></a>Edytor</h2>
+
+<p>Używam edytorka <a href="http://www.nano-editor.org/">nano</a> w wersji 2.3.2 z <a href="https://raw.github.com/scopatz/nanorc/master/git.nanorc">kolorowaniem ekranów gita</a>.
+</p>
+
+<h2>
+<a name="git" class="anchor" href="#git"><span class="octicon octicon-link"></span></a>GIT</h2>
+
+<p>Używam prawie najnowszej wersji Gita (<code>git version 1.8.4.2</code>) dostarczanej przez <a href="http://fedoraproject.org/">Fedorę</a>.</p>
+
+<p>Skrót konfiguracji mojego gita</p>
+
+<pre><code>[user]
+    name = Mariusz Smykula
+    email = mariuszs@gmail.com
+[core]
+    editor = nano
+[color]
+    ui = auto
+[branch]
+    autosetuprebase = always
+[alias]
+    undo = reset HEAD@{1}
+[apply]
+    whitespace = nowarn
+</code></pre>
+
+<h2>
+<a name="other-tools" class="anchor" href="#other-tools"><span class="octicon octicon-link"></span></a>Pozostałe narzędzia</h2>
+
+<ul>
+<li>
+<a href="http://hub.github.com/">hub</a> - command-line wrapper for github</li>
+<li><a href="https://github.com/jakubnabrdalik/gitkurwa">git kurwa</a></li>
+<li><a href="http://gnometerminator.blogspot.com/p/introduction.html">Terminator terminal</a></li>
+<li>
+<a href="http://jonas.nitro.dk/tig/">tig</a> - text-mode interface for Git</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-46132533-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
