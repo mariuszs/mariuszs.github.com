@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>N, 12 paź 2014 20:34:01 +0200</pubDate>
-    <lastBuildDate>N, 12 paź 2014 20:34:01 +0200</lastBuildDate>
+    <pubDate>N, 12 paź 2014 21:43:50 +0200</pubDate>
+    <lastBuildDate>N, 12 paź 2014 21:43:50 +0200</lastBuildDate>
 
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
@@ -186,7 +186,37 @@ Xft.hinting:    1
 Xft.hintstyle:  hintfull
 Xft.lcdfilter:  lcddefault
 Xft.rgba:   rgb
-&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Własne konfiguracje dla czcionek należy umieszczać w katalogu &amp;lt;code&amp;gt;~/.config/fontconfig/conf.d&amp;lt;/code&amp;gt; lub pliku &amp;lt;code&amp;gt;~/.config/fontconfig/fonts.conf&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;h2&amp;gt;Warto poczytać:&amp;lt;/h2&amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Własne konfiguracje dla czcionek należy umieszczać w katalogu &amp;lt;code&amp;gt;~/.config/fontconfig/conf.d&amp;lt;/code&amp;gt; lub pliku &amp;lt;code&amp;gt;~/.config/fontconfig/fonts.conf&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;h2&amp;gt;Jak to wygląda&amp;lt;/h2&amp;gt;
+&amp;lt;table&amp;gt;
+  &amp;lt;thead&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;th&amp;gt; &amp;lt;/th&amp;gt;
+      &amp;lt;th&amp;gt;Bez wygładzenia &amp;lt;/th&amp;gt;
+      &amp;lt;th&amp;gt;Wygładzenie w odcieniach szarości &amp;lt;/th&amp;gt;
+      &amp;lt;th&amp;gt;Wygładzenie Rgba&amp;lt;/th&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/thead&amp;gt;
+  &amp;lt;tbody&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;Bez hintingu &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/no-no.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;No aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-no.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-no.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing No hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;Hinting Slight &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/no-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;No aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/gryscale-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;Hinting Full &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/no-full.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;No aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-full.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-full.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;&amp;lt;h2&amp;gt;Warto poczytać:&amp;lt;/h2&amp;gt;
 &amp;lt;ul&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/&amp;quot;&amp;gt;Fonts and font sizes in Fedora on the internet: hold onto your hats…&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/&amp;quot;&amp;gt;How to get gorgeous looking fonts on ubuntu linux&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;

@@ -235,7 +235,37 @@ Xft.hinting:    1
 Xft.hintstyle:  hintfull
 Xft.lcdfilter:  lcddefault
 Xft.rgba:   rgb
-</code></pre><p>Własne konfiguracje dla czcionek należy umieszczać w katalogu <code>~/.config/fontconfig/conf.d</code> lub pliku <code>~/.config/fontconfig/fonts.conf</code>.</p><h2>Warto poczytać:</h2>
+</code></pre><p>Własne konfiguracje dla czcionek należy umieszczać w katalogu <code>~/.config/fontconfig/conf.d</code> lub pliku <code>~/.config/fontconfig/fonts.conf</code>.</p><h2>Jak to wygląda</h2>
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Bez wygładzenia </th>
+      <th>Wygładzenie w odcieniach szarości </th>
+      <th>Wygładzenie Rgba</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bez hintingu </td>
+      <td><img src="/hinting/no-no.png" alt="alt text" title="No aliasing No hinting""/> </td>
+      <td><img src="/hinting/greyscale-no.png" alt="alt text" title="Greyscale aliasing No hinting""/> </td>
+      <td><img src="/hinting/rgba-no.png" alt="alt text" title="RGBA aliasing No hinting""/></td>
+    </tr>
+    <tr>
+      <td>Hinting Slight </td>
+      <td><img src="/hinting/no-slight.png" alt="alt text" title="No aliasing Slight hinting""/></td>
+      <td><img src="/hinting/gryscale-slight.png" alt="alt text" title="Greyscale aliasing Slight hinting""/></td>
+      <td><img src="/hinting/rgba-slight.png" alt="alt text" title="RGBA aliasing Slight hinting""/></td>
+    </tr>
+    <tr>
+      <td>Hinting Full </td>
+      <td><img src="/hinting/no-full.png" alt="alt text" title="No aliasing Full hinting""/></td>
+      <td><img src="/hinting/greyscale-full.png" alt="alt text" title="Greyscale aliasing Full hinting""/> </td>
+      <td><img src="/hinting/rgba-full.png" alt="alt text" title="RGBA aliasing Full hinting""/></td>
+    </tr>
+  </tbody>
+</table><h2>Warto poczytać:</h2>
 <ul>
   <li><a href="https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/">Fonts and font sizes in Fedora on the internet: hold onto your hats…</a></li>
   <li><a href="http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/">How to get gorgeous looking fonts on ubuntu linux</a></li>
