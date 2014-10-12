@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 	    <meta charset="utf-8" />
-	    <title>MariuszS</title>
+	    <title>Default network address in VirtManager</title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	    <meta name="description" content="" />
 	    <meta name="author" content="" />
@@ -12,10 +12,10 @@
 	    <meta name="generator" content="JBake" />
 	
 	    <!-- Le styles -->
-	    <link rel="stylesheet" href="css/bootstrap.min.css" />
-	    <link rel="stylesheet" href="css/asciidoctor.css" />
-	    <link rel="stylesheet" href="css/base.css" />
-	    <link rel="stylesheet" href="css/prettify.css" />
+	    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="../../css/asciidoctor.css" />
+	    <link rel="stylesheet" href="../../css/base.css" />
+	    <link rel="stylesheet" href="../../css/prettify.css" />
 	
 	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
@@ -27,11 +27,11 @@
 	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"/>
 	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"/>
 	    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"/>-->
-	    <link rel="shortcut icon" href="favicon.ico" />
+	    <link rel="shortcut icon" href="../../favicon.ico" />
 	</head>
 	<body onload="prettyPrint()">
-    <div id="wrap">
-    	<div>
+	<div id="wrap">
+		<div>
 	
 	  <!-- Fixed navbar -->
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -43,13 +43,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" shape="rect" href="">mariuszs.github.io</a>
+          <a class="navbar-brand" shape="rect" href="../../">mariuszs.github.io</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a shape="rect" href="index.html">Home</a></li>
-            <li><a shape="rect" href="about.html">About</a></li>
-            <li><a shape="rect" href="feed.xml">Subscribe</a></li>
+            <li><a shape="rect" href="../../index.html">Home</a></li>
+            <li><a shape="rect" href="../../about.html">About</a></li>
+            <li><a shape="rect" href="../../feed.xml">Subscribe</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -57,41 +57,35 @@
 
 	</div>
 		<div class="container">
+	
 			<div class="page-header">
-				<h1>Blog Archive</h1>
+				<h1>Default network address in VirtManager</h1>
 			</div>
-	
-			
-			    <h3>października 2014</h3>
 		
-				<h4>12 - <a href="blog/2014/jbake_gradle_and_github.html" shape="rect">Java Geek Blog - jBake, Gradle and GitHub</a></h4>
-				
-			
-	
-			
-			    <h3>października 2014</h3>
+			<p><em>12 października 2014</em></p>
 		
-				<h4>12 - <a href="blog/2014/virtmanager_default_address.html" shape="rect">Default network address in VirtManager</a></h4>
-				
-			
-	
-			
-			    <h3>października 2014</h3>
+			<p><p>Changing default network address <code>192.168.122.x</code> in Virt Manager<br/>&ndash;</p>
+<pre><code>sudo virsh net-edit default 
+</code></pre><p>and replace all <code>192.168.122.</code> with <code>192.168.200.</code> or other ip number.</p></p>
 		
-				<h4>11 - <a href="blog/2014/fedora-fonts.html" shape="rect">Czcionki w Fedorze</a></h4>
-				
-			
-	
-			
-			    <h3>grudnia 2013</h3>
-		
-				<h4>03 - <a href="blog/2013/informative_git_prompt.html" shape="rect">Informative Git Prompt with Fish</a></h4>
-				
-			
+			<hr />
+            <div id="disqus_thread"></div>
+            <script type="text/javascript" xml:space="preserve">
+                var disqus_shortname = 'mariuszs';
+                var disqus_identifier = 'blog/2014/virtmanager_default_address.html';
+                var disqus_title = 'Default network address in VirtManager';
+                var disqus_url = 'http://mariuszs.github.io/blog/2014/virtmanager_default_address.html';
 
-		</div>
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" shape="rect">comments powered by Disqus.</a></noscript>
+        </div>
 	</div>
-	
 	<div>
 			<div id="push"></div>
     
@@ -104,9 +98,9 @@
 		    <!-- Le javascript
 		    ================================================== -->
 		    <!-- Placed at the end of the document so the pages load faster -->
-		    <script xml:space="preserve" src="js/jquery-1.11.1.min.js"></script>
-		    <script xml:space="preserve" src="js/bootstrap.min.js"></script>
-		    <script xml:space="preserve" src="js/prettify.js"></script>
+		    <script xml:space="preserve" src="../../js/jquery-1.11.1.min.js"></script>
+		    <script xml:space="preserve" src="../../js/bootstrap.min.js"></script>
+		    <script xml:space="preserve" src="../../js/prettify.js"></script>
     
     	</div>
     </body>
