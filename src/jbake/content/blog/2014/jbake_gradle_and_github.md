@@ -216,7 +216,8 @@ W pliku szablonu `footer.thyme` dodajemy przed `</body>`:
 Więcej
 ------
 
-* [Authoring your blog on GitHub with JBake and Gradle](http://melix.github.io/blog/2014/02/hosting-jbake-github.html)
-* [Blogguer sous GitHub avec JBake](http://blog.ackx.net/blogguer-sous-github-avec-jbake.html)
+* [JBake Documentation](http://jbake.org/docs/2.3.2/)
 * [Tutorial: Using Thymeleaf](http://www.thymeleaf.org/doc/usingthymeleaf.html#introducing-thymeleaf)
 * [Markdown Here Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
+* [Authoring your blog on GitHub with JBake and Gradle](http://melix.github.io/blog/2014/02/hosting-jbake-github.html)
+* [Blogguer sous GitHub avec JBake](http://blog.ackx.net/blogguer-sous-github-avec-jbake.html)

@@ -55,7 +55,7 @@ The symbols are as follows:
 When the branch name starts with a colon `:`, it means it's actually a hash, not a branch (although it should be pretty clear, unless you name your branches like hashes :-)
 
 
-== Configuration
+## Configuration
 
 To configure informative git prompt in Fish shell run `fish_config` from command line. In browser window select 
 **prompt** and mark **Informative Git Prompt**. To enable selected prompt click **use prompt**.
@@ -89,7 +89,7 @@ set -g __fish_git_prompt_color_cleanstate green bold
 
 You can customize this configuration by editing `~/.config/fish/config.fish` and overwriting variables.
 
-= Related: 
+## Related:
  
  * https://github.com/magicmonty/bash-git-prompt[Informative git prompt for bash] 
  * https://github.com/mariuszs/informative_git_prompt[Informative GIT Prompt for Fish shell]
