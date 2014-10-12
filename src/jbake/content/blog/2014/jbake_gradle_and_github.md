@@ -1,7 +1,7 @@
 title=Java Geek Blog - jBake, Gradle and GitHub
 date=2014-10-12
 type=post
-tags=blog
+tags=blog, jbake, gradle, thymeleaf, markdown, github
 status=published
 ~~~~~~
 
@@ -46,6 +46,7 @@ Inicjalizujemy bloga z szablonem thymeleafa
     cd src/jbake
     jbake -i thymeleaf
     cd ../..
+    rm -rf src/jbake/content/blog/*    
     git add --all
     git commit -m "jbake structure"
 
@@ -59,7 +60,6 @@ Zawartość `build.gradle`
         dependencies {
             classpath 'org.pegdown:pegdown:1.4.2'
             classpath 'org.thymeleaf:thymeleaf:2.1.3.RELEASE'
-            classpath 'org.asciidoctor:asciidoctor-java-integration:0.1.4'
         }
     }
     
@@ -100,6 +100,28 @@ Zapisujemy zmiany
 
     git add --all
     git commit -m "init blog"
+
+Pierwszy post
+---
+
+Przygotowujemy katalog na posty z roku 2014
+
+    mkdir -p src/jbake/content/blog/2014
+    
+Tworzymy pierwszwego posta, nazwa jest dowolna np. testujemy_bloga.md
+
+    title=Testujemy bloga
+    date=2014-10-12
+    type=post
+    tags=blog
+    status=published
+    ~~~~~~
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.
+
+![alt text](/jbake_structure.png "Project structure")
+
+
 
 Publikowanie bloga na githubie
 ----
@@ -147,5 +169,7 @@ Jeśli chcemy zachować źródła naszego bloga na githubie to należy wykonać
 Więcej
 ------
 
-* http://melix.github.io/blog/2014/02/hosting-jbake-github.html[Authoring your blog on GitHub with JBake and Gradle]
-* http://blog.ackx.net/blogguer-sous-github-avec-jbake.html[Blogguer sous GitHub avec JBake]
+* [Authoring your blog on GitHub with JBake and Gradle](http://melix.github.io/blog/2014/02/hosting-jbake-github.html)
+* [Blogguer sous GitHub avec JBake](http://blog.ackx.net/blogguer-sous-github-avec-jbake.html)
+* [Tutorial: Using Thymeleaf](http://www.thymeleaf.org/doc/usingthymeleaf.html#introducing-thymeleaf)
+* [Markdown Here Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
