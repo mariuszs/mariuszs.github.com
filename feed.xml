@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>N, 12 paź 2014 11:49:18 +0200</pubDate>
-    <lastBuildDate>N, 12 paź 2014 11:49:18 +0200</lastBuildDate>
+    <pubDate>N, 12 paź 2014 12:33:34 +0200</pubDate>
+    <lastBuildDate>N, 12 paź 2014 12:33:34 +0200</lastBuildDate>
 
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
@@ -24,7 +24,7 @@
 set -x GRADLE_HOME ~/.local/tools/gradle
 
 set -x PATH $PATH $JBAKE_HOME/bin $GRADLE_HOME/bin
-&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;IntelliJ IDEA Community Edition w zupełności wystarczy do naszych potrzeb. Warto doinstalować sobie wtyczkę &amp;lt;a href=&amp;quot;https://github.com/nicoulaj/idea-markdown&amp;quot;&amp;gt;idea-markdown&amp;lt;/a&amp;gt; oraz powiązać pliki z rozszerzeniem &amp;lt;code&amp;gt;.thyme&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;/idea_file_types.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;.thyme file type&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/p&amp;gt;&amp;lt;h1&amp;gt;Rozpoczynamy&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;Tworzymy nowy publiczny projekt na &amp;lt;a href=&amp;quot;https://github.com/&amp;quot;&amp;gt;githubie&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Tworzymy nowy katalog na projekt bloga&amp;lt;/p&amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;IntelliJ IDEA Community Edition w zupełności wystarczy do naszych potrzeb. Warto doinstalować sobie wtyczkę &amp;lt;a href=&amp;quot;https://github.com/nicoulaj/idea-markdown&amp;quot;&amp;gt;idea-markdown&amp;lt;/a&amp;gt; oraz powiązać pliki z rozszerzeniem &amp;lt;code&amp;gt;.thyme&amp;lt;/code&amp;gt; z edytorem HTML.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;/idea_file_types.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;.thyme file type&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/p&amp;gt;&amp;lt;h1&amp;gt;Rozpoczynamy&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;Tworzymy nowy publiczny projekt na &amp;lt;a href=&amp;quot;https://github.com/&amp;quot;&amp;gt;githubie&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Tworzymy nowy katalog na projekt bloga&amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;mkdir ~/git/foo
 cd ~/git/foo
 git init
@@ -148,10 +148,11 @@ git commit -m &amp;amp;quot;add publish settings&amp;amp;quot;
 &amp;amp;lt;/script&amp;amp;gt;     
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Więcej&amp;lt;/h2&amp;gt;
 &amp;lt;ul&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://melix.github.io/blog/2014/02/hosting-jbake-github.html&amp;quot;&amp;gt;Authoring your blog on GitHub with JBake and Gradle&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://blog.ackx.net/blogguer-sous-github-avec-jbake.html&amp;quot;&amp;gt;Blogguer sous GitHub avec JBake&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://jbake.org/docs/2.3.2/&amp;quot;&amp;gt;JBake Documentation&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.thymeleaf.org/doc/usingthymeleaf.html#introducing-thymeleaf&amp;quot;&amp;gt;Tutorial: Using Thymeleaf&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet&amp;quot;&amp;gt;Markdown Here Cheatsheet&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://melix.github.io/blog/2014/02/hosting-jbake-github.html&amp;quot;&amp;gt;Authoring your blog on GitHub with JBake and Gradle&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://blog.ackx.net/blogguer-sous-github-avec-jbake.html&amp;quot;&amp;gt;Blogguer sous GitHub avec JBake&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
 &amp;lt;/ul&amp;gt;</description>	  
     </item>
 
@@ -189,7 +190,7 @@ Xft.rgba:   rgb
 &amp;lt;ul&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/&amp;quot;&amp;gt;Fonts and font sizes in Fedora on the internet: hold onto your hats…&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/&amp;quot;&amp;gt;How to get gorgeous looking fonts on ubuntu linux&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://blog.andreas-haerter.com/2011/07/18/tune-improve-fedora-fonts-typeface-ubuntu-like-sharp-fonts&amp;quot;&amp;gt;How to change Fedora&amp;#39;s font rendering to get an Ubuntu-like result&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://blog.andreas-haerter.com/2011/07/18/tune-improve-fedora-fonts-typeface-ubuntu-like-sharp-fonts&amp;quot;&amp;gt;How to change Fedora&amp;amp;rsquo;s font rendering to get an Ubuntu-like result&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://wiki.gentoo.org/wiki/Fontconfig&amp;quot;&amp;gt;Gentoo Wiki - Fontconfig&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
 &amp;lt;/ul&amp;gt;</description>	  
     </item>
@@ -340,7 +341,9 @@ set -g __fish_git_prompt_color_cleanstate green bold&amp;lt;/pre&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;h1 id=&amp;quot;related&amp;quot; class=&amp;quot;sect0&amp;quot;&amp;gt;Related:&amp;lt;/h1&amp;gt;
+&amp;lt;div class=&amp;quot;sect1&amp;quot;&amp;gt;
+&amp;lt;h2 id=&amp;quot;related&amp;quot;&amp;gt;Related:&amp;lt;/h2&amp;gt;
+&amp;lt;div class=&amp;quot;sectionbody&amp;quot;&amp;gt;
 &amp;lt;div class=&amp;quot;ulist&amp;quot;&amp;gt;
 &amp;lt;ul&amp;gt;
 &amp;lt;li&amp;gt;
@@ -356,6 +359,8 @@ set -g __fish_git_prompt_color_cleanstate green bold&amp;lt;/pre&amp;gt;
 &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://sebastiancelis.com/2009/11/16/zsh-prompt-git-users/&amp;quot;&amp;gt;A zsh prompt for Git users&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
 &amp;lt;/li&amp;gt;
 &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;</description>	  
     </item>
 
