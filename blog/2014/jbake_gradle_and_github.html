@@ -165,7 +165,7 @@ git push origin gh-pages
 git commit -m &quot;add publish settings&quot;
 </code></pre><p>Jeśli chcemy zachować źródła naszego bloga na githubie to należy wykonać</p>
 <pre><code>git push -u origin master
-</code></pre><h2>Dodajemy możliwość komentowania na blogu</h2><p>Zakładamy sobie konto w serwisie <a href="https://disqus.com/">disqus</a>. Nazwa która wybierzemy<br/>jako site identity shortname będzie nam potrzebna w konfiguracji bloga. Należy ją<br/>zapisać w zmiennej <code>disqus.username</code>.</p><p>W tym celu do build.gradle dodajemy kolejny wpis</p>
+</code></pre><h2>Dodajemy możliwość komentowania na blogu</h2><p>Zakładamy sobie konto w serwisie <a href="https://disqus.com/">disqus</a>. Nazwa która wybierzemyjako site identity shortname będzie nam potrzebna w konfiguracji bloga. Należy ją zapisać w zmiennej <code>disqus.username</code>.</p><p>W tym celu do build.gradle dodajemy kolejny wpis</p>
 <pre><code>configuration[&#39;disqus.username&#39;] = &#39;myuser&#39;
 </code></pre><p>W pliku szablonu <code>post.thyme</code> szukamy użycia <code>content.body</code> i umieszczamy poniżej panel do komentowania:</p>
 <pre><code>&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;

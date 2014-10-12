@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>N, 12 paź 2014 11:39:11 +0200</pubDate>
-    <lastBuildDate>N, 12 paź 2014 11:39:11 +0200</lastBuildDate>
+    <pubDate>N, 12 paź 2014 11:40:36 +0200</pubDate>
+    <lastBuildDate>N, 12 paź 2014 11:40:36 +0200</lastBuildDate>
 
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
@@ -114,7 +114,7 @@ git push origin gh-pages
 git commit -m &amp;amp;quot;add publish settings&amp;amp;quot;
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Jeśli chcemy zachować źródła naszego bloga na githubie to należy wykonać&amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;git push -u origin master
-&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Dodajemy możliwość komentowania na blogu&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Zakładamy sobie konto w serwisie &amp;lt;a href=&amp;quot;https://disqus.com/&amp;quot;&amp;gt;disqus&amp;lt;/a&amp;gt;. Nazwa która wybierzemy&amp;lt;br/&amp;gt;jako site identity shortname będzie nam potrzebna w konfiguracji bloga. Należy ją&amp;lt;br/&amp;gt;zapisać w zmiennej &amp;lt;code&amp;gt;disqus.username&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;W tym celu do build.gradle dodajemy kolejny wpis&amp;lt;/p&amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Dodajemy możliwość komentowania na blogu&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Zakładamy sobie konto w serwisie &amp;lt;a href=&amp;quot;https://disqus.com/&amp;quot;&amp;gt;disqus&amp;lt;/a&amp;gt;. Nazwa która wybierzemyjako site identity shortname będzie nam potrzebna w konfiguracji bloga. Należy ją zapisać w zmiennej &amp;lt;code&amp;gt;disqus.username&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;W tym celu do build.gradle dodajemy kolejny wpis&amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;configuration[&amp;amp;#39;disqus.username&amp;amp;#39;] = &amp;amp;#39;myuser&amp;amp;#39;
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;W pliku szablonu &amp;lt;code&amp;gt;post.thyme&amp;lt;/code&amp;gt; szukamy użycia &amp;lt;code&amp;gt;content.body&amp;lt;/code&amp;gt; i umieszczamy poniżej panel do komentowania:&amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;div id=&amp;amp;quot;disqus_thread&amp;amp;quot;&amp;amp;gt;&amp;amp;lt;/div&amp;amp;gt;
