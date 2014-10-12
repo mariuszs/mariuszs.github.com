@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>N, 12 paź 2014 11:40:36 +0200</pubDate>
-    <lastBuildDate>N, 12 paź 2014 11:40:36 +0200</lastBuildDate>
+    <pubDate>N, 12 paź 2014 11:49:18 +0200</pubDate>
+    <lastBuildDate>N, 12 paź 2014 11:49:18 +0200</lastBuildDate>
 
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
@@ -24,7 +24,7 @@
 set -x GRADLE_HOME ~/.local/tools/gradle
 
 set -x PATH $PATH $JBAKE_HOME/bin $GRADLE_HOME/bin
-&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h1&amp;gt;Rozpoczynamy&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;Tworzymy nowy publiczny projekt na &amp;lt;a href=&amp;quot;https://github.com/&amp;quot;&amp;gt;githubie&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Tworzymy nowy katalog na projekt bloga&amp;lt;/p&amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;IntelliJ IDEA Community Edition w zupełności wystarczy do naszych potrzeb. Warto doinstalować sobie wtyczkę &amp;lt;a href=&amp;quot;https://github.com/nicoulaj/idea-markdown&amp;quot;&amp;gt;idea-markdown&amp;lt;/a&amp;gt; oraz powiązać pliki z rozszerzeniem &amp;lt;code&amp;gt;.thyme&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;img src=&amp;quot;/idea_file_types.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;.thyme file type&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/p&amp;gt;&amp;lt;h1&amp;gt;Rozpoczynamy&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;Tworzymy nowy publiczny projekt na &amp;lt;a href=&amp;quot;https://github.com/&amp;quot;&amp;gt;githubie&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Tworzymy nowy katalog na projekt bloga&amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;mkdir ~/git/foo
 cd ~/git/foo
 git init
