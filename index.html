@@ -90,6 +90,7 @@ git commit -m &quot;gradle structure&quot;
 <pre><code>cd src/jbake
 jbake -i thymeleaf
 cd ../..
+rm -rf src/jbake/content/blog/*    
 git add --all
 git commit -m &quot;jbake structure&quot;
 </code></pre><h2>Konfigurujemy gradla</h2><p>Zawartość <code>build.gradle</code></p>
@@ -97,7 +98,6 @@ git commit -m &quot;jbake structure&quot;
     dependencies {
         classpath &#39;org.pegdown:pegdown:1.4.2&#39;
         classpath &#39;org.thymeleaf:thymeleaf:2.1.3.RELEASE&#39;
-        classpath &#39;org.asciidoctor:asciidoctor-java-integration:0.1.4&#39;
     }
 }
 
@@ -118,7 +118,7 @@ plugins {
     configuration[&#39;template.feed.file&#39;] = &#39;feed.thyme&#39;
 }
 </code></pre><p>i usuwamy plik properties</p>
-<pre><code>rm src/jbake/jbake.properties
+<pre><code>rm src/jbake/jbake.properties        
 </code></pre><p>Sprawdzamy czy blog kompiluje się bez błędów</p>
 <pre><code> gradle jbake
 </code></pre><p>Uruchamiamy lokalny serwer bloga</p>
@@ -126,7 +126,18 @@ plugins {
 </code></pre><p>Blog można obejrzeć pod adresem <a href="http://localhost:8820/">http://localhost:8820/</a> </p><p>Zapisujemy zmiany</p>
 <pre><code>git add --all
 git commit -m &quot;init blog&quot;
-</code></pre><h2>Publikowanie bloga na githubie</h2><p>Tworzymy plik <code>publish.gradle</code> z zawartością:</p>
+</code></pre><h2>Pierwszy post</h2><p>Przygotowujemy katalog na posty z roku 2014</p>
+<pre><code>mkdir -p src/jbake/content/blog/2014
+</code></pre><p>Tworzymy pierwszwego posta, nazwa jest dowolna np. testujemy_bloga.md</p>
+<pre><code>title=Testujemy bloga
+date=2014-10-12
+type=post
+tags=blog
+status=published
+~~~~~~
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.
+</code></pre><p><img src="/jbake_structure.png" alt="alt text" title="Project structure""/></p><h2>Publikowanie bloga na githubie</h2><p>Tworzymy plik <code>publish.gradle</code> z zawartością:</p>
 <pre><code>plugins {
     id &quot;org.ajoberstar.github-pages&quot; version &quot;0.11.1&quot;
 }
@@ -156,8 +167,10 @@ git commit -m &quot;add publish settings&quot;
 <pre><code>git push -u origin master
 </code></pre><h2>Więcej</h2>
 <ul>
-  <li><a href="http://melix.github.io/blog/2014/02/hosting-jbake-github.html[Authoring">http://melix.github.io/blog/2014/02/hosting-jbake-github.html[Authoring</a> your blog on GitHub with JBake and Gradle]</li>
-  <li><a href="http://blog.ackx.net/blogguer-sous-github-avec-jbake.html[Blogguer">http://blog.ackx.net/blogguer-sous-github-avec-jbake.html[Blogguer</a> sous GitHub avec JBake]</li>
+  <li><a href="http://melix.github.io/blog/2014/02/hosting-jbake-github.html">Authoring your blog on GitHub with JBake and Gradle</a></li>
+  <li><a href="http://blog.ackx.net/blogguer-sous-github-avec-jbake.html">Blogguer sous GitHub avec JBake</a></li>
+  <li><a href="http://www.thymeleaf.org/doc/usingthymeleaf.html#introducing-thymeleaf">Tutorial: Using Thymeleaf</a></li>
+  <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">Markdown Here Cheatsheet</a></li>
 </ul></p>
 			</div>
 			
