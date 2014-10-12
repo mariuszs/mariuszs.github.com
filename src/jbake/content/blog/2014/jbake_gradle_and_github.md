@@ -19,6 +19,10 @@ Warto aby polecenia `gradle` oraz `jbake` były dostępne z linii poleceń. W pr
     set -x GRADLE_HOME ~/.local/tools/gradle
     
     set -x PATH $PATH $JBAKE_HOME/bin $GRADLE_HOME/bin
+    
+IntelliJ IDEA Community Edition w zupełności wystarczy do naszych potrzeb. Warto doinstalować sobie wtyczkę [idea-markdown](https://github.com/nicoulaj/idea-markdown) oraz powiązać pliki z rozszerzeniem `.thyme` z edytorem HTML.
+
+![alt text](/idea_file_types.png ".thyme file type")   
 
 Rozpoczynamy
 ===
