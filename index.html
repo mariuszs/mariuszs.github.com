@@ -165,6 +165,38 @@ git push origin gh-pages
 git commit -m &quot;add publish settings&quot;
 </code></pre><p>Jeśli chcemy zachować źródła naszego bloga na githubie to należy wykonać</p>
 <pre><code>git push -u origin master
+</code></pre><h2>Dodajemy możliwość komentowania na blogu</h2><p>Zakładamy sobie konto w serwisie <a href="https://disqus.com/">disqus</a>. Nazwa która wybierzemy<br/>jako site identity shortname będzie nam potrzebna w konfiguracji bloga. Należy ją<br/>zapisać w zmiennej <code>disqus.username</code>.</p><p>W tym celu do build.gradle dodajemy kolejny wpis</p>
+<pre><code>configuration[&#39;disqus.username&#39;] = &#39;myuser&#39;
+</code></pre><p>W pliku szablonu <code>post.thyme</code> szukamy użycia <code>content.body</code> i umieszczamy poniżej panel do komentowania:</p>
+<pre><code>&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; th:inline=&quot;javascript&quot;&gt;
+    var disqus_shortname = [[${config.disqus_username}]];
+    var disqus_identifier = [[${content.uri}]];
+    var disqus_title = [[${content.title}]];
+    var disqus_url = [[${config.site_host} + ${content.uri}]];
+
+    /* * * DON&#39;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&#39;script&#39;); dsq.type = &#39;text/javascript&#39;; dsq.async = true;
+        dsq.src = &#39;//&#39; + disqus_shortname + &#39;.disqus.com/embed.js&#39;;
+        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+</code></pre><p>W pliku szablonu <code>index.thyme</code> zmieniamy urla do postów na:</p>
+<pre><code>&lt;a th:href=&quot;${post.uri} + &#39;#disqus_thread&#39;&quot;  th:attr=&#39;data-disqus-identifier=${post.uri}&#39;&gt;&lt;h1 th:text=&#39;${post.title}&#39;&gt;title&lt;/h1&gt;&lt;/a&gt;
+</code></pre><p>W pliku szablonu <code>footer.thyme</code> dodajemy przed <code>&lt;/body&gt;</code>:</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; th:inline=&quot;javascript&quot;&gt;
+    var disqus_shortname = [[${config.disqus_username}]];
+
+    /* * * DON&#39;T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement(&#39;script&#39;); s.async = true;
+        s.type = &#39;text/javascript&#39;;
+        s.src = &#39;//&#39; + disqus_shortname + &#39;.disqus.com/count.js&#39;;
+        (document.getElementsByTagName(&#39;HEAD&#39;)[0] || document.getElementsByTagName(&#39;BODY&#39;)[0]).appendChild(s);
+    }());
+&lt;/script&gt;     
 </code></pre><h2>Więcej</h2>
 <ul>
   <li><a href="http://melix.github.io/blog/2014/02/hosting-jbake-github.html">Authoring your blog on GitHub with JBake and Gradle</a></li>

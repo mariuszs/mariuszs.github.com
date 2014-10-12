@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>N, 12 paź 2014 11:23:05 +0200</pubDate>
-    <lastBuildDate>N, 12 paź 2014 11:23:05 +0200</lastBuildDate>
+    <pubDate>N, 12 paź 2014 11:39:11 +0200</pubDate>
+    <lastBuildDate>N, 12 paź 2014 11:39:11 +0200</lastBuildDate>
 
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
@@ -114,6 +114,38 @@ git push origin gh-pages
 git commit -m &amp;amp;quot;add publish settings&amp;amp;quot;
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Jeśli chcemy zachować źródła naszego bloga na githubie to należy wykonać&amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;git push -u origin master
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Dodajemy możliwość komentowania na blogu&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Zakładamy sobie konto w serwisie &amp;lt;a href=&amp;quot;https://disqus.com/&amp;quot;&amp;gt;disqus&amp;lt;/a&amp;gt;. Nazwa która wybierzemy&amp;lt;br/&amp;gt;jako site identity shortname będzie nam potrzebna w konfiguracji bloga. Należy ją&amp;lt;br/&amp;gt;zapisać w zmiennej &amp;lt;code&amp;gt;disqus.username&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;W tym celu do build.gradle dodajemy kolejny wpis&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;configuration[&amp;amp;#39;disqus.username&amp;amp;#39;] = &amp;amp;#39;myuser&amp;amp;#39;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;W pliku szablonu &amp;lt;code&amp;gt;post.thyme&amp;lt;/code&amp;gt; szukamy użycia &amp;lt;code&amp;gt;content.body&amp;lt;/code&amp;gt; i umieszczamy poniżej panel do komentowania:&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;div id=&amp;amp;quot;disqus_thread&amp;amp;quot;&amp;amp;gt;&amp;amp;lt;/div&amp;amp;gt;
+&amp;amp;lt;script type=&amp;amp;quot;text/javascript&amp;amp;quot; th:inline=&amp;amp;quot;javascript&amp;amp;quot;&amp;amp;gt;
+    var disqus_shortname = [[${config.disqus_username}]];
+    var disqus_identifier = [[${content.uri}]];
+    var disqus_title = [[${content.title}]];
+    var disqus_url = [[${config.site_host} + ${content.uri}]];
+
+    /* * * DON&amp;amp;#39;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&amp;amp;#39;script&amp;amp;#39;); dsq.type = &amp;amp;#39;text/javascript&amp;amp;#39;; dsq.async = true;
+        dsq.src = &amp;amp;#39;//&amp;amp;#39; + disqus_shortname + &amp;amp;#39;.disqus.com/embed.js&amp;amp;#39;;
+        (document.getElementsByTagName(&amp;amp;#39;head&amp;amp;#39;)[0] || document.getElementsByTagName(&amp;amp;#39;body&amp;amp;#39;)[0]).appendChild(dsq);
+    })();
+&amp;amp;lt;/script&amp;amp;gt;
+&amp;amp;lt;noscript&amp;amp;gt;Please enable JavaScript to view the &amp;amp;lt;a href=&amp;amp;quot;http://disqus.com/?ref_noscript&amp;amp;quot;&amp;amp;gt;comments powered by Disqus.&amp;amp;lt;/a&amp;amp;gt;&amp;amp;lt;/noscript&amp;amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;W pliku szablonu &amp;lt;code&amp;gt;index.thyme&amp;lt;/code&amp;gt; zmieniamy urla do postów na:&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;a th:href=&amp;amp;quot;${post.uri} + &amp;amp;#39;#disqus_thread&amp;amp;#39;&amp;amp;quot;  th:attr=&amp;amp;#39;data-disqus-identifier=${post.uri}&amp;amp;#39;&amp;amp;gt;&amp;amp;lt;h1 th:text=&amp;amp;#39;${post.title}&amp;amp;#39;&amp;amp;gt;title&amp;amp;lt;/h1&amp;amp;gt;&amp;amp;lt;/a&amp;amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;W pliku szablonu &amp;lt;code&amp;gt;footer.thyme&amp;lt;/code&amp;gt; dodajemy przed &amp;lt;code&amp;gt;&amp;amp;lt;/body&amp;amp;gt;&amp;lt;/code&amp;gt;:&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;script type=&amp;amp;quot;text/javascript&amp;amp;quot; th:inline=&amp;amp;quot;javascript&amp;amp;quot;&amp;amp;gt;
+    var disqus_shortname = [[${config.disqus_username}]];
+
+    /* * * DON&amp;amp;#39;T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement(&amp;amp;#39;script&amp;amp;#39;); s.async = true;
+        s.type = &amp;amp;#39;text/javascript&amp;amp;#39;;
+        s.src = &amp;amp;#39;//&amp;amp;#39; + disqus_shortname + &amp;amp;#39;.disqus.com/count.js&amp;amp;#39;;
+        (document.getElementsByTagName(&amp;amp;#39;HEAD&amp;amp;#39;)[0] || document.getElementsByTagName(&amp;amp;#39;BODY&amp;amp;#39;)[0]).appendChild(s);
+    }());
+&amp;amp;lt;/script&amp;amp;gt;     
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Więcej&amp;lt;/h2&amp;gt;
 &amp;lt;ul&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://melix.github.io/blog/2014/02/hosting-jbake-github.html&amp;quot;&amp;gt;Authoring your blog on GitHub with JBake and Gradle&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
