@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Cz, 16 paź 2014 22:22:43 +0200</pubDate>
-    <lastBuildDate>Cz, 16 paź 2014 22:22:43 +0200</lastBuildDate>
+    <pubDate>Cz, 16 paź 2014 22:37:24 +0200</pubDate>
+    <lastBuildDate>Cz, 16 paź 2014 22:37:24 +0200</lastBuildDate>
 
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
@@ -209,18 +209,18 @@ Xft.rgba:   rgb
     &amp;lt;/tr&amp;gt;
     &amp;lt;tr&amp;gt;
       &amp;lt;td&amp;gt;Wygładzenie w odcieniach szarości &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-no-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-slight-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-full-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-no.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-full.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
     &amp;lt;/tr&amp;gt;
     &amp;lt;tr&amp;gt;
       &amp;lt;td&amp;gt;Wygładzenie Rgba &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-no-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-slight-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-full-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-no.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-full.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
     &amp;lt;/tr&amp;gt;
   &amp;lt;/tbody&amp;gt;
-&amp;lt;/table&amp;gt;&amp;lt;p&amp;gt;Aby uaktywnić wygładzania Rgba niezbędna jest instalacja pakietu &amp;lt;code&amp;gt;freetype-freeworld&amp;lt;/code&amp;gt;. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Przykładowe renderingi z wygładzaniem RGBA przy użyciu standardowego pakietu &amp;lt;code&amp;gt;freetype&amp;lt;/code&amp;gt; oraz pakietu &amp;lt;code&amp;gt;freetype-freeworld&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;/table&amp;gt;&amp;lt;p&amp;gt;Aby uaktywnić wygładzanie Rgba niezbędna jest instalacja pakietu &amp;lt;code&amp;gt;freetype-freeworld&amp;lt;/code&amp;gt;. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Przykładowe renderingi z wygładzaniem RGBA przy użyciu standardowego pakietu &amp;lt;code&amp;gt;freetype&amp;lt;/code&amp;gt; oraz pakietu &amp;lt;code&amp;gt;freetype-freeworld&amp;lt;/code&amp;gt;. &amp;lt;/p&amp;gt;
 &amp;lt;table&amp;gt;
   &amp;lt;thead&amp;gt;
     &amp;lt;tr&amp;gt;
