@@ -11,9 +11,10 @@
 			</div>
 			
 			<div th:each="post : ${published_posts}">
-                <a th:href="${post.uri} + '#disqus_thread'"  th:attr='data-disqus-identifier=${post.uri}'><h1 th:text='${post.title}'>title</h1></a>
+                <a th:href="${post.uri}"  th:attr='data-disqus-identifier=${post.uri}'><h1 th:text='${post.title}'>title</h1></a>
+
 				<p th:text='${#dates.format(post.date,"dd MMMM yyyy")}'>date</p>
-				<p th:utext='${post.body}'>body</p>
+                <p th:utext='${post.body}'>body</p>
 			</div>
 				
 			<hr />

@@ -24,7 +24,15 @@ Nie polecam korzystania z [Infinality](http://www.infinality.net/blog/) projekt 
 
 [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html)
 
-    sudo yum install levien-inconsolata-fonts                  
+    sudo yum install levien-inconsolata-fonts
+                      
+[Adobe Source Code Pro](http://adobe-fonts.github.io/source-code-pro/)
+                      
+    sudo yum install adobe-source-sans-pro-fonts                      
+
+[Adobe Source Sans Pro](http://adobe-fonts.github.io/source-sans-pro/)
+                      
+    sudo yum install adobe-source-sans-pro-fonts                      
 
 Konfiguracja czcionek
 ---
@@ -62,6 +70,38 @@ Efekt konfiguracji można zweryfikować poleceniem `xrdb -query`
 
 Własne konfiguracje dla czcionek należy umieszczać w katalogu `~/.config/fontconfig/conf.d` lub pliku `~/.config/fontconfig/fonts.conf`.
 
+Jak to wygląda
+---
+
+|                                                                               | Bez hintingu                                                                   | Slight hinting                                                                 | Full hinting
+|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------
+|Bez wygładzenia                                                                |![alt text](/hinting/no-no.png "No aliasing No hinting")                        |![alt text](/hinting/no-slight.png "No aliasing Slight hinting")                      |![alt text](/hinting/no-full.png "No aliasing Full hinting")
+|Wygładzenie w odcieniach szarości with the patented subpixel rendering enabled |![alt text](/hinting/greyscale-no.png "Greyscale aliasing No hinting")          |![alt text](/hinting/greyscale-slight.png "Greyscale aliasing Slight hinting")         |![alt text](/hinting/greyscale-full.png "Greyscale aliasing Full hinting") 
+|Wygładzenie Rgba with the patented subpixel rendering enabled                  |![alt text](/hinting/rgba-no.png "RGBA aliasing No hinting")                    |![alt text](/hinting/rgba-slight.png "RGBA aliasing Slight hinting")                  |![alt text](/hinting/rgba-full.png "RGBA aliasing Full hinting")
+|Wygładzenie w odcieniach szarości                                              |![alt text](/hinting/greyscale-no-patented.png "Greyscale aliasing No hinting") |![alt text](/hinting/greyscale-slight-patented.png "Greyscale aliasing Slight hinting")|![alt text](/hinting/greyscale-full-patented.png "Greyscale aliasing Full hinting") 
+|Wygładzenie Rgba                                                               |![alt text](/hinting/rgba-no-patented.png "RGBA aliasing No hinting")           |![alt text](/hinting/rgba-slight-patented.png "RGBA aliasing Slight hinting")         |![alt text](/hinting/rgba-full-patented.png "RGBA aliasing Full hinting")
+   
+   
+Szybkie porównanie obrazków przez użyciu programu ImageMagick wykazuje, że bez włączonego interpretera bajtkodu (`freetype-freeworld`) wygładzanie Rgba niczego nie zmienia:
+    
+ 
+**Porównanie wygładzenie w odcieniach szarości z wygładzaniem RGB, hinting: Full.**
+    
+|Z domyślnym pakietem `freetype`|z pakietem `freetype-freeworld`
+|-----------------------|------------------------     
+|![alt text](/hinting/diff-grey2rgba-patented.png "Difference between greyscale and rgb aliasing without Bytecode Interpreter")|![alt text](/hinting/diff-grey2rgba-freeworld.png "Difference between greyscale and rgb aliasing with Bytecode Interpreter")       
+
+Kolorem czerwonym zaznaczono różniące się piksele elementy obrazka.
+    
+   
+Instalacja czcionek z Windows
+---
+
+   Montujemy dysk z Windowsem i kopiujemy czcionki z `/Windows/Fonts` do `~/.fonts`.
+   
+Po skopiowaniu odświeżamy czcionki (indeksujemy)
+   
+   fc-cache -fv
    
 Warto poczytać:
 ----
@@ -70,3 +110,8 @@ Warto poczytać:
  * [How to get gorgeous looking fonts on ubuntu linux](http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/)
  * [How to change Fedora's font rendering to get an Ubuntu-like result](http://blog.andreas-haerter.com/2011/07/18/tune-improve-fedora-fonts-typeface-ubuntu-like-sharp-fonts)
  * [Gentoo Wiki - Fontconfig](http://wiki.gentoo.org/wiki/Fontconfig)
+ * [Improving Font Rendering for Fedora Using Bytecode Interpreter](http://www.fclose.com/2805/improving-font-rendering-for-fedora-using-bytecode-interpreter/)
+ * [Subpixel rendering](https://en.wikipedia.org/wiki/Subpixel_rendering)
+ * [ClearType Patents, FreeType and the Unix Desktop: an explanation](http://david.freetype.org/cleartype-patents.html
+ * [FreeType - CHANGES BETWEEN 2.4.10 and 2.4.11](http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view)
+ https://code.google.com/p/chromium/issues/detail?id=29871

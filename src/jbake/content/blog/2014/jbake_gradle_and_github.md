@@ -197,7 +197,7 @@ W pliku szablonu `post.thyme` szukamy użycia `content.body` i umieszczamy poni�
     
 W pliku szablonu `index.thyme` zmieniamy urla do postów na:
     
-    <a th:href="${post.uri} + '#disqus_thread'"  th:attr='data-disqus-identifier=${post.uri}'><h1 th:text='${post.title}'>title</h1></a>
+    <a th:href="${post.uri}"  th:attr='data-disqus-identifier=${post.uri}'><h1 th:text='${post.title}'>title</h1></a>
     
 W pliku szablonu `footer.thyme` dodajemy przed `</body>`:
      
