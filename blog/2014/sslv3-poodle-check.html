@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <meta charset="utf-8" />
+	    <title>SSLv3 Poodle Verification</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta name="description" content="" />
+	    <meta name="author" content="" />
+	    <meta name="keywords" content="" />
+	    <meta name="generator" content="JBake" />
+	
+	    <!-- Le styles -->
+	    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="../../css/asciidoctor.css" />
+	    <link rel="stylesheet" href="../../css/base.css" />
+	    <link rel="stylesheet" href="../../css/prettify.css" />
+	
+	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	      <script src="/js/html5shiv.min.js"></script>
+	    <![endif]-->
+	
+	    <!-- Fav and touch icons -->
+	    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"/>-->
+	    <link rel="shortcut icon" href="../../favicon.ico" />
+
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+	</head>
+	<body onload="prettyPrint()">
+	<div id="wrap">
+		<div>
+	
+	  <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" shape="rect" href="../../">mariuszs.github.io</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a shape="rect" href="../../index.html">Home</a></li>
+            <li><a shape="rect" href="../../about.html">About</a></li>
+            <li><a shape="rect" href="../../feed.xml">Subscribe</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	</div>
+		<div class="container">
+	
+			<div class="page-header">
+				<h1>SSLv3 Poodle Verification</h1>
+			</div>
+		
+			<p><em>16 października 2014</em></p>
+		
+			<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I prefer <a href="http://nmap.org/">Nmap Security Scanner</a> to verify SSLv3 Poodle vulnerability (CVE-2014-3566), the command is very simple:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>nmap -p 443 --script +ssl-enum-ciphers YOUR.SERVER.ADDRESS.COM</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sample result:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Starting Nmap 6.47 ( http://nmap.org ) at 2014-10-16 22:44 CEST
+Nmap scan report for YOUR.SERVER.ADDRESS.COM (XXX.XXX.XXX.XXX)
+Host is up (0.030s latency).
+rDNS record for XXX.XXX.XXX.XXX: static.XXX.XXX.XXX.XXX.address.com
+PORT    STATE SERVICE
+443/tcp open  https
+| ssl-enum-ciphers:
+|   SSLv3: No supported ciphers found                                           <i class="conum" data-value="1"></i><b>(1)</b>
+|   TLSv1.0:
+|     ciphers:
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
+|     compressors:
+|       NULL
+|   TLSv1.1:
+|     ciphers:
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
+|     compressors:
+|       NULL
+|   TLSv1.2:
+|     ciphers:
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 - strong
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 - strong
+|     compressors:
+|       NULL
+|_  least strength: strong
+
+Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>SSLv3 is not supported, we are safe!</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>OpenSSL has added support for TLS_FALLBACK_SCSV to allow applications to block the ability for a MITM attacker to force a protocol downgrade. Some client applications (such as browsers) will reconnect using a downgraded protocol to work around interoperability bugs in older servers. This could be exploited by an active man-in-the-middle to downgrade connections to SSL 3.0 even if both sides of the connection support higher protocols. SSL 3.0 contains a number of weaknesses including POODLE (CVE-2014-3566). See also <a href="https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00">https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00</a> and <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf">https://www.openssl.org/~bodo/ssl-poodle.pdf</a></p>
+</div>
+<div class="paragraph">
+<p>Fixed in OpenSSL 1.0.1j (Affected 1.0.1i, 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1)</p>
+</div>
+<div class="paragraph">
+<p>Fixed in OpenSSL 1.0.0o (Affected 1.0.0n, 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0)</p>
+</div>
+<div class="paragraph">
+<p>Fixed in OpenSSL 0.9.8zc (Affected 0.9.8zb, 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div></p>
+		
+			<hr />
+            <div id="disqus_thread"></div>
+            <script type="text/javascript" xml:space="preserve">
+                var disqus_shortname = 'mariuszs';
+                var disqus_identifier = 'blog/2014/sslv3-poodle-check.html';
+                var disqus_title = 'SSLv3 Poodle Verification';
+                var disqus_url = 'http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html';
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" shape="rect">comments powered by Disqus.</a></noscript>
+        </div>
+	</div>
+	<div>
+			<div id="push"></div>
+    
+		    <div id="footer">
+		      <div class="container">
+		        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/" shape="rect">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org" shape="rect">JBake <span>v2.3.0</span></a></p>
+		      </div>
+		    </div>
+	    
+		    <!-- Le javascript
+		    ================================================== -->
+		    <!-- Placed at the end of the document so the pages load faster -->
+		    <script xml:space="preserve" src="../../js/jquery-1.11.1.min.js"></script>
+		    <script xml:space="preserve" src="../../js/bootstrap.min.js"></script>
+		    <script xml:space="preserve" src="../../js/prettify.js"></script>
+    
+    	</div>
+    </body>
+</html>

@@ -64,6 +64,95 @@
 			</div>
 			
 			<div>
+                <a shape="rect" data-disqus-identifier="blog/2014/sslv3-poodle-check.html" href="blog/2014/sslv3-poodle-check.html"><h1>SSLv3 Poodle Verification</h1></a>
+
+				<p>16 października 2014</p>
+                <p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I prefer <a href="http://nmap.org/">Nmap Security Scanner</a> to verify SSLv3 Poodle vulnerability (CVE-2014-3566), the command is very simple:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>nmap -p 443 --script +ssl-enum-ciphers YOUR.SERVER.ADDRESS.COM</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sample result:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Starting Nmap 6.47 ( http://nmap.org ) at 2014-10-16 22:44 CEST
+Nmap scan report for YOUR.SERVER.ADDRESS.COM (XXX.XXX.XXX.XXX)
+Host is up (0.030s latency).
+rDNS record for XXX.XXX.XXX.XXX: static.XXX.XXX.XXX.XXX.address.com
+PORT    STATE SERVICE
+443/tcp open  https
+| ssl-enum-ciphers:
+|   SSLv3: No supported ciphers found                                           <i class="conum" data-value="1"></i><b>(1)</b>
+|   TLSv1.0:
+|     ciphers:
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
+|     compressors:
+|       NULL
+|   TLSv1.1:
+|     ciphers:
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
+|     compressors:
+|       NULL
+|   TLSv1.2:
+|     ciphers:
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 - strong
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 - strong
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 - strong
+|     compressors:
+|       NULL
+|_  least strength: strong
+
+Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>SSLv3 is not supported, we are safe!</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>OpenSSL has added support for TLS_FALLBACK_SCSV to allow applications to block the ability for a MITM attacker to force a protocol downgrade. Some client applications (such as browsers) will reconnect using a downgraded protocol to work around interoperability bugs in older servers. This could be exploited by an active man-in-the-middle to downgrade connections to SSL 3.0 even if both sides of the connection support higher protocols. SSL 3.0 contains a number of weaknesses including POODLE (CVE-2014-3566). See also <a href="https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00">https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00</a> and <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf">https://www.openssl.org/~bodo/ssl-poodle.pdf</a></p>
+</div>
+<div class="paragraph">
+<p>Fixed in OpenSSL 1.0.1j (Affected 1.0.1i, 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1)</p>
+</div>
+<div class="paragraph">
+<p>Fixed in OpenSSL 1.0.0o (Affected 1.0.0n, 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0)</p>
+</div>
+<div class="paragraph">
+<p>Fixed in OpenSSL 0.9.8zc (Affected 0.9.8zb, 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div></p>
+			</div>
+			
+			<div>
                 <a shape="rect" data-disqus-identifier="blog/2014/jbake_gradle_and_github.html" href="blog/2014/jbake_gradle_and_github.html"><h1>Java Geek Blog - jBake, Gradle and GitHub</h1></a>
 
 				<p>12 października 2014</p>
