@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>N, 12 paź 2014 21:43:50 +0200</pubDate>
-    <lastBuildDate>N, 12 paź 2014 21:43:50 +0200</lastBuildDate>
+    <pubDate>Cz, 16 paź 2014 22:00:07 +0200</pubDate>
+    <lastBuildDate>Cz, 16 paź 2014 22:00:07 +0200</lastBuildDate>
 
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
@@ -133,7 +133,7 @@ git commit -m &amp;amp;quot;add publish settings&amp;amp;quot;
 &amp;amp;lt;/script&amp;amp;gt;
 &amp;amp;lt;noscript&amp;amp;gt;Please enable JavaScript to view the &amp;amp;lt;a href=&amp;amp;quot;http://disqus.com/?ref_noscript&amp;amp;quot;&amp;amp;gt;comments powered by Disqus.&amp;amp;lt;/a&amp;amp;gt;&amp;amp;lt;/noscript&amp;amp;gt;
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;W pliku szablonu &amp;lt;code&amp;gt;index.thyme&amp;lt;/code&amp;gt; zmieniamy urla do postów na:&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;a th:href=&amp;amp;quot;${post.uri} + &amp;amp;#39;#disqus_thread&amp;amp;#39;&amp;amp;quot;  th:attr=&amp;amp;#39;data-disqus-identifier=${post.uri}&amp;amp;#39;&amp;amp;gt;&amp;amp;lt;h1 th:text=&amp;amp;#39;${post.title}&amp;amp;#39;&amp;amp;gt;title&amp;amp;lt;/h1&amp;amp;gt;&amp;amp;lt;/a&amp;amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;a th:href=&amp;amp;quot;${post.uri}&amp;amp;quot;  th:attr=&amp;amp;#39;data-disqus-identifier=${post.uri}&amp;amp;#39;&amp;amp;gt;&amp;amp;lt;h1 th:text=&amp;amp;#39;${post.title}&amp;amp;#39;&amp;amp;gt;title&amp;amp;lt;/h1&amp;amp;gt;&amp;amp;lt;/a&amp;amp;gt;
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;W pliku szablonu &amp;lt;code&amp;gt;footer.thyme&amp;lt;/code&amp;gt; dodajemy przed &amp;lt;code&amp;gt;&amp;amp;lt;/body&amp;amp;gt;&amp;lt;/code&amp;gt;:&amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;script type=&amp;amp;quot;text/javascript&amp;amp;quot; th:inline=&amp;amp;quot;javascript&amp;amp;quot;&amp;amp;gt;
     var disqus_shortname = [[${config.disqus_username}]];
@@ -168,7 +168,11 @@ git commit -m &amp;amp;quot;add publish settings&amp;amp;quot;
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://android.googlesource.com/&amp;quot;&amp;gt;Google Droid fonts&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install google-droid-serif-fonts google-droid-sans-mono-fonts google-droid-sans-fonts  
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www.levien.com/type/myfonts/inconsolata.html&amp;quot;&amp;gt;Inconsolata&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install levien-inconsolata-fonts                  
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install levien-inconsolata-fonts
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://adobe-fonts.github.io/source-code-pro/&amp;quot;&amp;gt;Adobe Source Code Pro&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install adobe-source-sans-pro-fonts                      
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://adobe-fonts.github.io/source-sans-pro/&amp;quot;&amp;gt;Adobe Source Sans Pro&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install adobe-source-sans-pro-fonts                      
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Konfiguracja czcionek&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr &amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Hinting i wygładzanie RGB&amp;lt;/p&amp;gt;
@@ -191,37 +195,55 @@ Xft.rgba:   rgb
   &amp;lt;thead&amp;gt;
     &amp;lt;tr&amp;gt;
       &amp;lt;th&amp;gt; &amp;lt;/th&amp;gt;
-      &amp;lt;th&amp;gt;Bez wygładzenia &amp;lt;/th&amp;gt;
-      &amp;lt;th&amp;gt;Wygładzenie w odcieniach szarości &amp;lt;/th&amp;gt;
-      &amp;lt;th&amp;gt;Wygładzenie Rgba&amp;lt;/th&amp;gt;
+      &amp;lt;th&amp;gt;Bez hintingu &amp;lt;/th&amp;gt;
+      &amp;lt;th&amp;gt;Slight hinting &amp;lt;/th&amp;gt;
+      &amp;lt;th&amp;gt;Full hinting&amp;lt;/th&amp;gt;
     &amp;lt;/tr&amp;gt;
   &amp;lt;/thead&amp;gt;
   &amp;lt;tbody&amp;gt;
     &amp;lt;tr&amp;gt;
-      &amp;lt;td&amp;gt;Bez hintingu &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;Bez wygładzenia &amp;lt;/td&amp;gt;
       &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/no-no.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;No aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-no.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-no.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing No hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-    &amp;lt;tr&amp;gt;
-      &amp;lt;td&amp;gt;Hinting Slight &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/no-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;No aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/gryscale-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-    &amp;lt;/tr&amp;gt;
-    &amp;lt;tr&amp;gt;
-      &amp;lt;td&amp;gt;Hinting Full &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/no-slight.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;No aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
       &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/no-full.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;No aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-full.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
-      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-full.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;Wygładzenie w odcieniach szarości &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-no-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-slight-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/greyscale-full-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Greyscale aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;Wygładzenie Rgba &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-no-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing No hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-slight-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Slight hinting&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/rgba-full-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;RGBA aliasing Full hinting&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
     &amp;lt;/tr&amp;gt;
   &amp;lt;/tbody&amp;gt;
-&amp;lt;/table&amp;gt;&amp;lt;h2&amp;gt;Warto poczytać:&amp;lt;/h2&amp;gt;
+&amp;lt;/table&amp;gt;&amp;lt;p&amp;gt;Aby uaktywnić wygładzania Rgba niezbędna jest instalacja pakietu &amp;lt;code&amp;gt;freetype-freeworld&amp;lt;/code&amp;gt;. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Przykładowe renderingi z wygładzaniem RGBA przy użyciu standardowego pakietu &amp;lt;code&amp;gt;freetype&amp;lt;/code&amp;gt; oraz pakietu &amp;lt;code&amp;gt;freetype-freeworld&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;table&amp;gt;
+  &amp;lt;thead&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;th&amp;gt;&amp;lt;code&amp;gt;freetype&amp;lt;/code&amp;gt; &amp;lt;/th&amp;gt;
+      &amp;lt;th&amp;gt;&amp;amp;rsquo;freetype-freeworld`&amp;lt;/th&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/thead&amp;gt;
+  &amp;lt;tbody&amp;gt;
+    &amp;lt;tr&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/lorem-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Patented RGBa example&amp;quot;&amp;quot;/&amp;gt; &amp;lt;/td&amp;gt;
+      &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/lorem-no-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Patented RGBa example&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;&amp;lt;h2&amp;gt;Instalacja czcionek z Windows&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Montujemy dysk z Windowsem i kopiujemy czcionki z &amp;lt;code&amp;gt;/Windows/Fonts&amp;lt;/code&amp;gt; do &amp;lt;code&amp;gt;~/.fonts&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Po skopiowaniu odświeżamy czcionki (indeksujemy)&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fc-cache -fv&amp;lt;/p&amp;gt;&amp;lt;h2&amp;gt;Warto poczytać:&amp;lt;/h2&amp;gt;
 &amp;lt;ul&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/&amp;quot;&amp;gt;Fonts and font sizes in Fedora on the internet: hold onto your hats…&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/&amp;quot;&amp;gt;How to get gorgeous looking fonts on ubuntu linux&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://blog.andreas-haerter.com/2011/07/18/tune-improve-fedora-fonts-typeface-ubuntu-like-sharp-fonts&amp;quot;&amp;gt;How to change Fedora&amp;amp;rsquo;s font rendering to get an Ubuntu-like result&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://wiki.gentoo.org/wiki/Fontconfig&amp;quot;&amp;gt;Gentoo Wiki - Fontconfig&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.fclose.com/2805/improving-font-rendering-for-fedora-using-bytecode-interpreter/&amp;quot;&amp;gt;Improving Font Rendering for Fedora Using Bytecode Interpreter&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://en.wikipedia.org/wiki/Subpixel_rendering&amp;quot;&amp;gt;Subpixel rendering&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;[ClearType Patents, FreeType and the Unix Desktop: an explanation](&amp;lt;a href=&amp;quot;http://david.freetype.org/cleartype-patents.html&amp;quot;&amp;gt;http://david.freetype.org/cleartype-patents.html&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view&amp;quot;&amp;gt;FreeType - CHANGES BETWEEN 2.4.10 and 2.4.11&amp;lt;/a&amp;gt;&amp;lt;br/&amp;gt; &amp;lt;a href=&amp;quot;https://code.google.com/p/chromium/issues/detail?id=29871&amp;quot;&amp;gt;https://code.google.com/p/chromium/issues/detail?id=29871&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
 &amp;lt;/ul&amp;gt;</description>	  
     </item>
 

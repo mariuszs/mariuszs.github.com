@@ -28,6 +28,8 @@
 	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"/>
 	    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"/>-->
 	    <link rel="shortcut icon" href="../../favicon.ico" />
+
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
 	</head>
 	<body onload="prettyPrint()">
 	<div id="wrap">
@@ -184,7 +186,7 @@ git commit -m &quot;add publish settings&quot;
 &lt;/script&gt;
 &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 </code></pre><p>W pliku szablonu <code>index.thyme</code> zmieniamy urla do postów na:</p>
-<pre><code>&lt;a th:href=&quot;${post.uri} + &#39;#disqus_thread&#39;&quot;  th:attr=&#39;data-disqus-identifier=${post.uri}&#39;&gt;&lt;h1 th:text=&#39;${post.title}&#39;&gt;title&lt;/h1&gt;&lt;/a&gt;
+<pre><code>&lt;a th:href=&quot;${post.uri}&quot;  th:attr=&#39;data-disqus-identifier=${post.uri}&#39;&gt;&lt;h1 th:text=&#39;${post.title}&#39;&gt;title&lt;/h1&gt;&lt;/a&gt;
 </code></pre><p>W pliku szablonu <code>footer.thyme</code> dodajemy przed <code>&lt;/body&gt;</code>:</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot; th:inline=&quot;javascript&quot;&gt;
     var disqus_shortname = [[${config.disqus_username}]];
