@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Cz, 16 paź 2014 22:00:07 +0200</pubDate>
-    <lastBuildDate>Cz, 16 paź 2014 22:00:07 +0200</lastBuildDate>
+    <pubDate>Cz, 16 paź 2014 22:22:43 +0200</pubDate>
+    <lastBuildDate>Cz, 16 paź 2014 22:22:43 +0200</lastBuildDate>
 
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
@@ -225,7 +225,7 @@ Xft.rgba:   rgb
   &amp;lt;thead&amp;gt;
     &amp;lt;tr&amp;gt;
       &amp;lt;th&amp;gt;&amp;lt;code&amp;gt;freetype&amp;lt;/code&amp;gt; &amp;lt;/th&amp;gt;
-      &amp;lt;th&amp;gt;&amp;amp;rsquo;freetype-freeworld`&amp;lt;/th&amp;gt;
+      &amp;lt;th&amp;gt;&amp;lt;code&amp;gt;freetype-freeworld&amp;lt;/code&amp;gt;&amp;lt;/th&amp;gt;
     &amp;lt;/tr&amp;gt;
   &amp;lt;/thead&amp;gt;
   &amp;lt;tbody&amp;gt;
@@ -234,7 +234,9 @@ Xft.rgba:   rgb
       &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;/hinting/lorem-no-patented.png&amp;quot; alt=&amp;quot;alt text&amp;quot; title=&amp;quot;Patented RGBa example&amp;quot;&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
     &amp;lt;/tr&amp;gt;
   &amp;lt;/tbody&amp;gt;
-&amp;lt;/table&amp;gt;&amp;lt;h2&amp;gt;Instalacja czcionek z Windows&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Montujemy dysk z Windowsem i kopiujemy czcionki z &amp;lt;code&amp;gt;/Windows/Fonts&amp;lt;/code&amp;gt; do &amp;lt;code&amp;gt;~/.fonts&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Po skopiowaniu odświeżamy czcionki (indeksujemy)&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;fc-cache -fv&amp;lt;/p&amp;gt;&amp;lt;h2&amp;gt;Warto poczytać:&amp;lt;/h2&amp;gt;
+&amp;lt;/table&amp;gt;&amp;lt;h2&amp;gt;Instalacja czcionek z Windows&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Montujemy dysk z Windowsem i kopiujemy czcionki z &amp;lt;code&amp;gt;/Windows/Fonts&amp;lt;/code&amp;gt; do &amp;lt;code&amp;gt;~/.fonts&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Po skopiowaniu odświeżamy czcionki (indeksujemy)&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;fc-cache -fv
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Warto poczytać:&amp;lt;/h2&amp;gt;
 &amp;lt;ul&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/&amp;quot;&amp;gt;Fonts and font sizes in Fedora on the internet: hold onto your hats…&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
   &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/&amp;quot;&amp;gt;How to get gorgeous looking fonts on ubuntu linux&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
