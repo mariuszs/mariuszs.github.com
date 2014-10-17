@@ -5,8 +5,8 @@
     <atom:link href="http://mariuszs.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Cz, 16 paź 2014 23:02:54 +0200</pubDate>
-    <lastBuildDate>Cz, 16 paź 2014 23:02:54 +0200</lastBuildDate>
+    <pubDate>Pt, 17 paź 2014 21:20:50 +0200</pubDate>
+    <lastBuildDate>Pt, 17 paź 2014 21:20:50 +0200</lastBuildDate>
 
     <item>
       <title>SSLv3 Poodle Verification</title>
@@ -266,7 +266,7 @@ git commit -m &amp;amp;quot;add publish settings&amp;amp;quot;
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Konfiguracja czcionek&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr &amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Hinting i wygładzanie RGB&amp;lt;/p&amp;gt;
-&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;gsettings &amp;amp;quot;set&amp;amp;quot; &amp;amp;quot;org.gnome.settings-daemon.plugins.xsettings&amp;amp;quot; &amp;amp;quot;hinting&amp;amp;quot; &amp;amp;quot;slight&amp;amp;quot;     
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;gsettings &amp;amp;quot;set&amp;amp;quot; &amp;amp;quot;org.gnome.settings-daemon.plugins.xsettings&amp;amp;quot; &amp;amp;quot;hinting&amp;amp;quot; &amp;amp;quot;full&amp;amp;quot;     
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Aby poprawnie ustawić wygładzanie RGB należy &amp;lt;a href=&amp;quot;http://www.lagom.nl/lcd-test/subpixel.php&amp;quot;&amp;gt;sprawdzić posiadaną matrycę&amp;lt;/a&amp;gt;. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Ustawienie per użytkownika &amp;lt;/p&amp;gt;
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;gsettings &amp;amp;quot;set&amp;amp;quot; &amp;amp;quot;org.gnome.settings-daemon.plugins.xsettings&amp;amp;quot; &amp;amp;quot;antialiasing&amp;amp;quot; &amp;amp;quot;rgba&amp;amp;quot;    
 &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Ustawienia globalne przez mechanizm fontconfig (zalecane)&amp;lt;/p&amp;gt;

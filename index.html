@@ -318,7 +318,7 @@ git commit -m &quot;add publish settings&quot;
 </code></pre><h2>Konfiguracja czcionek</h2><p>Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr </p>
 <pre><code>sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
 </code></pre><p>Hinting i wygładzanie RGB</p>
-<pre><code>gsettings &quot;set&quot; &quot;org.gnome.settings-daemon.plugins.xsettings&quot; &quot;hinting&quot; &quot;slight&quot;     
+<pre><code>gsettings &quot;set&quot; &quot;org.gnome.settings-daemon.plugins.xsettings&quot; &quot;hinting&quot; &quot;full&quot;     
 </code></pre><p>Aby poprawnie ustawić wygładzanie RGB należy <a href="http://www.lagom.nl/lcd-test/subpixel.php">sprawdzić posiadaną matrycę</a>. </p><p>Ustawienie per użytkownika </p>
 <pre><code>gsettings &quot;set&quot; &quot;org.gnome.settings-daemon.plugins.xsettings&quot; &quot;antialiasing&quot; &quot;rgba&quot;    
 </code></pre><p>Ustawienia globalne przez mechanizm fontconfig (zalecane)</p>
