@@ -43,7 +43,7 @@ Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr
             
 Hinting i wygładzanie RGB
 
-    gsettings "set" "org.gnome.settings-daemon.plugins.xsettings" "hinting" "slight"     
+    gsettings "set" "org.gnome.settings-daemon.plugins.xsettings" "hinting" "full"     
     
 Aby poprawnie ustawić wygładzanie RGB należy [sprawdzić posiadaną matrycę](http://www.lagom.nl/lcd-test/subpixel.php). 
             
@@ -76,32 +76,27 @@ Jak to wygląda
 |                                                                               | Bez hintingu                                                                   | Slight hinting                                                                 | Full hinting
 |-------------------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------
 |Bez wygładzenia                                                                |![alt text](/hinting/no-no.png "No aliasing No hinting")                        |![alt text](/hinting/no-slight.png "No aliasing Slight hinting")                      |![alt text](/hinting/no-full.png "No aliasing Full hinting")
-|Wygładzenie w odcieniach szarości with the patented subpixel rendering enabled |![alt text](/hinting/greyscale-no.png "Greyscale aliasing No hinting")          |![alt text](/hinting/greyscale-slight.png "Greyscale aliasing Slight hinting")         |![alt text](/hinting/greyscale-full.png "Greyscale aliasing Full hinting") 
-|Wygładzenie Rgba with the patented subpixel rendering enabled                  |![alt text](/hinting/rgba-no.png "RGBA aliasing No hinting")                    |![alt text](/hinting/rgba-slight.png "RGBA aliasing Slight hinting")                  |![alt text](/hinting/rgba-full.png "RGBA aliasing Full hinting")
-|Wygładzenie w odcieniach szarości                                              |![alt text](/hinting/greyscale-no-patented.png "Greyscale aliasing No hinting") |![alt text](/hinting/greyscale-slight-patented.png "Greyscale aliasing Slight hinting")|![alt text](/hinting/greyscale-full-patented.png "Greyscale aliasing Full hinting") 
-|Wygładzenie Rgba                                                               |![alt text](/hinting/rgba-no-patented.png "RGBA aliasing No hinting")           |![alt text](/hinting/rgba-slight-patented.png "RGBA aliasing Slight hinting")         |![alt text](/hinting/rgba-full-patented.png "RGBA aliasing Full hinting")
-   
-   
-Szybkie porównanie obrazków przez użyciu programu ImageMagick wykazuje, że bez włączonego interpretera bajtkodu (`freetype-freeworld`) wygładzanie Rgba niczego nie zmienia:
-    
- 
-**Porównanie wygładzenie w odcieniach szarości z wygładzaniem RGB, hinting: Full.**
-    
-|Z domyślnym pakietem `freetype`|z pakietem `freetype-freeworld`
-|-----------------------|------------------------     
-|![alt text](/hinting/diff-grey2rgba-patented.png "Difference between greyscale and rgb aliasing without Bytecode Interpreter")|![alt text](/hinting/diff-grey2rgba-freeworld.png "Difference between greyscale and rgb aliasing with Bytecode Interpreter")       
+|Wygładzenie w odcieniach szarości                                              |![alt text](/hinting/greyscale-no.png "Greyscale aliasing No hinting") |![alt text](/hinting/greyscale-slight.png "Greyscale aliasing Slight hinting")|![alt text](/hinting/greyscale-full.png "Greyscale aliasing Full hinting") 
+|Wygładzenie Rgba                                                               |![alt text](/hinting/rgba-no.png "RGBA aliasing No hinting")           |![alt text](/hinting/rgba-slight.png "RGBA aliasing Slight hinting")         |![alt text](/hinting/rgba-full.png "RGBA aliasing Full hinting")
 
-Kolorem czerwonym zaznaczono różniące się piksele elementy obrazka.
-    
+      
+Aby uaktywnić wygładzanie Rgba niezbędna jest instalacja pakietu `freetype-freeworld`.         
    
+   
+Przykładowe renderingi z wygładzaniem RGBA przy użyciu standardowego pakietu `freetype` oraz pakietu `freetype-freeworld`. 
+    
+|`freetype`                                                  |`freetype-freeworld`
+|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------   
+|![alt text](/hinting/lorem-patented.png "Patented RGBa example")                 |![alt text](/hinting/lorem-no-patented.png "Patented RGBa example")            
+
 Instalacja czcionek z Windows
 ---
 
-   Montujemy dysk z Windowsem i kopiujemy czcionki z `/Windows/Fonts` do `~/.fonts`.
+Montujemy dysk z Windowsem i kopiujemy czcionki z `/Windows/Fonts` do `~/.fonts`.
    
 Po skopiowaniu odświeżamy czcionki (indeksujemy)
    
-   fc-cache -fv
+    fc-cache -fv
    
 Warto poczytać:
 ----
