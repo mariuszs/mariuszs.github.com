@@ -1,18 +1,26 @@
 extends layout.jade
 
 block title
-  #{content.title}
+  | #{content.title}
 
 block content
 
-  div.row
-    p
-      div.col-md-9
-        em #{dates.format(content.date,"dd MMMM yyyy")}
-      div.col-md-3
-        div.pull-right
-          script(src="https://apis.google.com/js/platform.js", async defer)
-          div.g-plusone(href="#{config.site_host}#{content.uri}")
+  p.blog-post-meta
+    div.col-md-9
+      em #{dates.format(content.date,"dd MMMM yyyy")}
+    div.col-md-3
+      div.pull-right
+
+        a(class="btn btn-social-icon btn-google-plus",
+          href="https://plus.google.com/share?url=#{config.site_host}#{content.uri}",
+          target="_blank")
+          i(class="fa fa-google-plus")
+
+        a(class="btn btn-social-icon btn-twitter",
+          href="http://twitter.com/share?url=#{config.site_host}#{content.uri}&text=#{content.title}",
+          target="_blank")
+          i(class="fa fa-twitter")
+
 
   p !{content.body}
 

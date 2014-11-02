@@ -1,0 +1,24 @@
+div(class="col-sm-3 blog-sidebar")
+
+  div.sidebar-module(class="sidebar-module-inset")
+    h4 Archive
+
+    ol.list-unstyled
+      each post in published_posts
+        li
+          a(href="#{post.uri}") #{post.title}
+
+  div.sidebar-module
+    h4 Elsewhere
+    ol.list-unstyled
+      li
+        a(href="http://devskiller.com") DevSKiller
+      li
+        a(href="http://codearte.eu") Codearte
+      li
+        a(href="http://v2.gitkata.pl/") Git Kata
+      li
+        a(href="http://warszawa.jug.pl/#/about") Warszawa Java User Group
+      li
+        a(href="http://xmpp.org/") XMPP Standards Foundation
+
