@@ -6,7 +6,7 @@
     <atom:link rel="self" href="http://mariuszs.github.io//feed.xml" type="application/rss+xml"></atom:link>
     <description>My corner of the Internet</description>
     <language>en-gb</language>
-    <pubDate>N, 2 lis 2014 22:18:53 +0100</pubDate>
+    <pubDate>N, 2 lis 2014 22:33:17 +0100</pubDate>
     <item>
       <title>Continuous Delivery with Maven and Jenkins</title>
       <link>http://jonathanbullock.comblog/2014/continuous_deliver_with_maven_and_jenkins.html</link>
@@ -347,8 +347,9 @@ Xft.rgba:   rgb
   <li><a href="http://wiki.gentoo.org/wiki/Fontconfig">Gentoo Wiki - Fontconfig</a></li>
   <li><a href="http://www.fclose.com/2805/improving-font-rendering-for-fedora-using-bytecode-interpreter/">Improving Font Rendering for Fedora Using Bytecode Interpreter</a></li>
   <li><a href="https://en.wikipedia.org/wiki/Subpixel_rendering">Subpixel rendering</a></li>
-  <li>[ClearType Patents, FreeType and the Unix Desktop: an explanation](<a href="http://david.freetype.org/cleartype-patents.html">http://david.freetype.org/cleartype-patents.html</a></li>
-  <li><a href="http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view">FreeType - CHANGES BETWEEN 2.4.10 and 2.4.11</a><br/> <a href="https://code.google.com/p/chromium/issues/detail?id=29871">https://code.google.com/p/chromium/issues/detail?id=29871</a></li>
+  <li><a href="http://david.freetype.org/cleartype-patents.html">ClearType Patents, FreeType and the Unix Desktop: an explanation</a></li>
+  <li><a href="http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view">FreeType - CHANGES BETWEEN 2.4.10 and 2.4.11</a></li>
+  <li><a href="https://code.google.com/p/chromium/issues/detail?id=29871">lcdfilter in fontconfig is not honored: Chrome font rendering seems fuzzy compared to Firefox (on Linux)</a></li>
 </ul>]]>
       </description>
       <pubDate>So, 11 paź 2014 00:00:00 +0200</pubDate>
