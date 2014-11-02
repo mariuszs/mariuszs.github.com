@@ -5,8 +5,14 @@ block title
 
 block content
 
-  p
-    em #{dates.format(content.date,"dd MMMM yyyy")}
+  div.row
+    p
+      div.col-md-9
+        em #{dates.format(content.date,"dd MMMM yyyy")}
+      div.col-md-3
+        div.pull-right
+          script(src="https://apis.google.com/js/platform.js", async defer)
+          div.g-plusone(href="#{config.site_host}#{content.uri}")
 
   p !{content.body}
 

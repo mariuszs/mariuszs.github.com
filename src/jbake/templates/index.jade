@@ -5,9 +5,14 @@ block title
 
 block content
   each post in published_posts
-    a(href="#{post.uri}", data-disqus-identifier="#{post.uri}")
+    a(href="#{post.uri}")
       h1 #{post.title}
-    p #{dates.format(post.date,"dd MMMM yyyy")}
+    div.row
+      div.col-md-9 #{dates.format(post.date,"dd MMMM yyyy")}
+      div.col-md-3
+        p.text-right
+          a(href="#{post.uri}#disqus_thread", data-disqus-identifier="#{post.uri}")
+
     p !{post.body}
 
   hr
