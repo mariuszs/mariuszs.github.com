@@ -1,0 +1,15 @@
+extends layout.jade
+
+block title
+  Blog Archive
+
+block content
+  each post in posts
+    if dates.format(post.date,"MMMM yyyy") != last_month
+      h3 #{dates.format(post.date,"MMMM yyyy")}
+
+    h4 #{dates.format(post.date,"dd")} -
+      a(href='#{post.uri}') #{post.title}
+
+    last_month = dates.format(post.date,"MMMM yyyy")
+

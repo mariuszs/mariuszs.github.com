@@ -1,0 +1,16 @@
+extends layout.jade
+
+block title
+  Tag: #{tag}
+
+
+block content
+  each tag in tag_posts
+    if dates.format(post.date,"MMMM yyyy") != last_month
+      h3 #{dates.format(tag.date,"MMMM yyyy")}
+
+    h4 #{dates.format(tag.date,"dd")} -
+      a(href='#{tag.url}') #{tag.title}
+
+    last_month = dates.format(post.date,"MMMM yyyy")
+

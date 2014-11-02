@@ -1,0 +1,21 @@
+extends layout.jade
+
+block title
+  Blog
+
+block content
+  each post in published_posts
+    a(href="#{post.uri}", data-disqus-identifier="#{post.uri}")
+      h1 #{post.title}
+    p #{dates.format(post.date,"dd MMMM yyyy")}
+    p !{post.body}
+
+  hr
+
+  p Older posts are available in the <a href="archive.html" shape="rect">archive</a>.
+
+
+
+
+
+

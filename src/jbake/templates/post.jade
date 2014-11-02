@@ -1,0 +1,32 @@
+extends layout.jade
+
+block title
+  #{content.title}
+
+block content
+
+  p
+    em #{dates.format(content.date,"dd MMMM yyyy")}
+
+  p !{content.body}
+
+  div#disqus_thread
+
+  script(type='text/javascript').
+    var disqus_shortname = '#{config.disqus_username}';
+    var disqus_identifier = '#{content.uri}';
+    var disqus_title = '#{content.title}';
+    var disqus_url = '#{config.site_host}#{content.uri}';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+  noscript Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+
+  hr
+
+
