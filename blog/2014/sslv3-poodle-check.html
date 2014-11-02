@@ -1,74 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-	    <meta charset="utf-8" />
-	    <title>SSLv3 Poodle Verification</title>
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	    <meta name="description" content="" />
-	    <meta name="author" content="" />
-	    <meta name="keywords" content="" />
-	    <meta name="generator" content="JBake" />
-	
-	    <!-- Le styles -->
-	    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-	    <link rel="stylesheet" href="../../css/asciidoctor.css" />
-	    <link rel="stylesheet" href="../../css/base.css" />
-	    <link rel="stylesheet" href="../../css/prettify.css" />
-	
-	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-	    <!--[if lt IE 9]>
-	      <script src="/js/html5shiv.min.js"></script>
-	    <![endif]-->
-	
-	    <!-- Fav and touch icons -->
-	    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png"/>
-	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"/>
-	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"/>
-	    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"/>-->
-	    <link rel="shortcut icon" href="../../favicon.ico" />
-
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
-	</head>
-	<body onload="prettyPrint()">
-	<div id="wrap">
-		<div>
-	
-	  <!-- Fixed navbar -->
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<!DOCTYPE html>
+<html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>SSLv3 Poodle Verification
+      </title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <meta name="keywords" content="">
+      <meta name="generator" content="JBake">
+      <!--Le styles-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../../css/asciidoctor.css">
+      <link rel="stylesheet" href="../../css/prettify.css">
+      <link rel="stylesheet" href="../../css/blog.css">
+      <!--HTML5 shim, for IE6-8 support of HTML5 elements-->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <!--Fav icon-->
+      <link rel="shortcut icon" href="../../favicon.ico">
+    </head>
+  </html>
+  <body onload="prettyPrint()">
+    <div class="blog-masthead">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" shape="rect" href="../../">mariuszs.github.io</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a shape="rect" href="../../index.html">Home</a></li>
-            <li><a shape="rect" href="../../about.html">About</a></li>
-            <li><a shape="rect" href="../../feed.xml">Subscribe</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="../../index.html">Home</a>
+          <a class="blog-nav-item" href="../../about.html">About</a>
+          <a class="blog-nav-item" href="../../feed.xml">Subscribe</a>
+          <a class="blog-nav-item" href="https://github.com/mariuszs">
+            <i class="fa fa-github"></i> Github
+          </a>
+          <a class="blog-nav-item" href="https://twitter.com/mariusz_s">
+            <i class="fa fa-twitter"></i> Twitter
+          </a>
+          <a class="blog-nav-item" href="http://stackoverflow.com/users/516167/mariuszs">
+            <i class="fa fa-stack-overflow"></i> Stack Overflow
+          </a>
+        </nav>
       </div>
     </div>
-
-	</div>
-		<div class="container">
-	
-			<div class="page-header">
-				<h1>SSLv3 Poodle Verification</h1>
-			</div>
-		
-			<p><em>16 października 2014</em></p>
-		
-			<p><div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
+    <div class="container">
+      <div class="blog-header">
+        <h1 class="blog-title">mariuszs blog</h1>
+        <p class="lead blog-description">The official mariuszs blog.</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-9 blog-main">
+          <div class="blog-post">
+            <h2 class="blog-post-title">SSLv3 Poodle Verification
+            </h2>
+            <p class="blog-post-meta">
+              <div class="col-md-9">
+                <em>16 października 2014</em>
+              </div>
+              <div class="col-md-3">
+                <div class="pull-right">
+                  <a href="https://plus.google.com/share?url=http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html" class="btn btn-social-icon btn-google-plus" target="_blank">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                  <a href="http://twitter.com/share?url=http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html&amp;text=SSLv3 Poodle Verification" class="btn btn-social-icon btn-twitter" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </p>
+            <p><div class="paragraph">
 <p>I prefer <a href="http://nmap.org/">Nmap Security Scanner</a> to verify SSLv3 Poodle vulnerability (CVE-2014-3566), the command is very simple:</p>
 </div>
 <div class="listingblock">
@@ -128,11 +130,11 @@ Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds</pre>
 <table>
 <tr>
 <td class="icon">
-<i class="icon-note" title="Note"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>OpenSSL has added support for TLS_FALLBACK_SCSV to allow applications to block the ability for a MITM attacker to force a protocol downgrade. Some client applications (such as browsers) will reconnect using a downgraded protocol to work around interoperability bugs in older servers. This could be exploited by an active man-in-the-middle to downgrade connections to SSL 3.0 even if both sides of the connection support higher protocols. SSL 3.0 contains a number of weaknesses including POODLE (CVE-2014-3566). See also <a href="https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00">https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00</a> and <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf">https://www.openssl.org/~bodo/ssl-poodle.pdf</a></p>
+<p>OpenSSL has added support for TLS_FALLBACK_SCSV to allow applications to block the ability for a MITM attacker to force a protocol downgrade. Some client applications (such as browsers) will reconnect using a downgraded protocol to work around interoperability bugs in older servers. This could be exploited by an active man-in-the-middle to downgrade connections to SSL 3.0 even if both sides of the connection support higher protocols. SSL 3.0 contains a number of weaknesses including POODLE (CVE-2014-3566). See also <a href="https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00" class="bare">https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00</a> and <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf" class="bare">https://www.openssl.org/~bodo/ssl-poodle.pdf</a></p>
 </div>
 <div class="paragraph">
 <p>Fixed in OpenSSL 1.0.1j (Affected 1.0.1i, 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1)</p>
@@ -146,44 +148,86 @@ Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds</pre>
 </td>
 </tr>
 </table>
-</div>
-</div>
 </div></p>
-		
-			<hr />
             <div id="disqus_thread"></div>
-            <script type="text/javascript" xml:space="preserve">
-                var disqus_shortname = 'mariuszs';
-                var disqus_identifier = 'blog/2014/sslv3-poodle-check.html';
-                var disqus_title = 'SSLv3 Poodle Verification';
-                var disqus_url = 'http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html';
-
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" shape="rect">comments powered by Disqus.</a></noscript>
+            <script type="text/javascript">var disqus_shortname = 'mariuszs';
+var disqus_identifier = 'blog/2014/sslv3-poodle-check.html';
+var disqus_title = 'SSLv3 Poodle Verification';
+var disqus_url = 'http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <hr>
+          </div>
         </div>
-	</div>
-	<div>
-			<div id="push"></div>
-    
-		    <div id="footer">
-		      <div class="container">
-		        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/" shape="rect">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org" shape="rect">JBake <span>v2.3.0</span></a></p>
-		      </div>
-		    </div>
-	    
-		    <!-- Le javascript
-		    ================================================== -->
-		    <!-- Placed at the end of the document so the pages load faster -->
-		    <script xml:space="preserve" src="../../js/jquery-1.11.1.min.js"></script>
-		    <script xml:space="preserve" src="../../js/bootstrap.min.js"></script>
-		    <script xml:space="preserve" src="../../js/prettify.js"></script>
-    
-    	</div>
-    </body>
+        <div class="col-sm-3 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>Archive</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="blog/2014/sslv3-poodle-check.html">SSLv3 Poodle Verification</a>
+              </li>
+              <li>
+                <a href="blog/2014/jbake_gradle_and_github.html">Java Geek Blog - jBake, Gradle and GitHub</a>
+              </li>
+              <li>
+                <a href="blog/2014/fedora-fonts.html">Czcionki w Fedorze</a>
+              </li>
+              <li>
+                <a href="blog/2013/informative_git_prompt.html">Informative Git Prompt with Fish</a>
+              </li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="http://devskiller.com">DevSKiller</a>
+              </li>
+              <li>
+                <a href="http://codearte.eu">Codearte</a>
+              </li>
+              <li>
+                <a href="http://v2.gitkata.pl/">Git Kata</a>
+              </li>
+              <li>
+                <a href="http://warszawa.jug.pl/#/about">Warszawa Java User Group</a>
+              </li>
+              <li>
+                <a href="http://xmpp.org/">XMPP Standards Foundation</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="push"></div>
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">&copy; 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake <span>v2.3.3-SNAPSHOT</span></a></p>
+      </div>
+    </div>
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../js/prettify.js"></script>
+    <script type="text/javascript">var disqus_shortname = 'mariuszs';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+  var s = document.createElement('script'); s.async = true;
+  s.type = 'text/javascript';
+  s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());</script>
+    <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script type="text/javascript">try {
+  var pageTracker = _gat._getTracker("UA-46132533-1");
+  pageTracker._trackPageview();
+} catch(err) {}</script>
+  </body>
 </html>
