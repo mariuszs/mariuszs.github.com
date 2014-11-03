@@ -1,7 +1,7 @@
 title=Skype for Fedora 21
 date=2014-11-03
 type=post
-tags=blog
+tags=blog, skype, fedora
 status=published
 ~~~~~~
 
@@ -154,12 +154,9 @@ Installation
 
 
 
-Author
+Authors
 ---
 
-This tutorial is based on excellent message from fedora mailing list: [The new skype-4.3.0.37 is out. Build your own rpm for Fedora 20](https://lists.fedoraproject.org/pipermail/users/2014-June/450773.html).
-All the glory goes to *Cristian Sava*.
+This tutorial is based on excellent instruction from fedora mailing list: [The new skype-4.3.0.37 is out. Build your own rpm for Fedora 20](https://lists.fedoraproject.org/pipermail/users/2014-June/450773.html).
+All the glory goes to *Cristian Sava* and [*Murilo Opsfelder Araujo*](https://github.com/mopsfelder/skype-rpm/).
 
-More
----
-Skype spec: https://github.com/mopsfelder/skype-rpm/blob/master/skype.spec

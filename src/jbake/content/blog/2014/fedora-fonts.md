@@ -1,7 +1,7 @@
 title=Czcionki w Fedorze
 date=2014-10-11
 type=post
-tags=blog
+tags=blog, fedora, czcionki, fonts
 status=published
 ~~~~~~
 
