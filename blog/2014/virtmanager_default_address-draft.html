@@ -55,9 +55,11 @@
           <div class="blog-post">
             <h2 class="blog-post-title">Default network address in VirtManager
             </h2>
-            <p class="blog-post-meta">
+            <div class="row">
               <div class="col-md-9">
-                <em>12 października 2014</em>
+                <p class="blog-post-meta">
+                  <em>12 października 2014</em>
+                </p>
               </div>
               <div class="col-md-3">
                 <div class="pull-right">
@@ -69,7 +71,7 @@
                   </a>
                 </div>
               </div>
-            </p>
+            </div>
             <p><p>Changing default network address <code>192.168.122.x</code> in Virt Manager<br/>&ndash;</p>
 <pre><code>sudo virsh net-edit default 
 </code></pre><p>and replace all <code>192.168.122.</code> with <code>192.168.200.</code> or other ip number.</p></p>
