@@ -6,7 +6,7 @@ div(class="col-sm-3 blog-sidebar")
     ol.list-unstyled
       each post in published_posts
         li
-          a(href="#{post.uri}") #{post.title}
+          a(href="#{content.rootpath}#{post.uri}") #{post.title}
 
   div.sidebar-module
     h4 Elsewhere

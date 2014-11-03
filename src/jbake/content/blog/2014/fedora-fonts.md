@@ -107,6 +107,6 @@ Warto poczytać:
  * [Gentoo Wiki - Fontconfig](http://wiki.gentoo.org/wiki/Fontconfig)
  * [Improving Font Rendering for Fedora Using Bytecode Interpreter](http://www.fclose.com/2805/improving-font-rendering-for-fedora-using-bytecode-interpreter/)
  * [Subpixel rendering](https://en.wikipedia.org/wiki/Subpixel_rendering)
- * [ClearType Patents, FreeType and the Unix Desktop: an explanation](http://david.freetype.org/cleartype-patents.html
+ * [ClearType Patents, FreeType and the Unix Desktop: an explanation](http://david.freetype.org/cleartype-patents.html)
  * [FreeType - CHANGES BETWEEN 2.4.10 and 2.4.11](http://sourceforge.net/projects/freetype/files/freetype2/2.4.11/README/view)
- https://code.google.com/p/chromium/issues/detail?id=29871
+ * [lcdfilter in fontconfig is not honored: Chrome font rendering seems fuzzy compared to Firefox (on Linux)](https://code.google.com/p/chromium/issues/detail?id=29871)
