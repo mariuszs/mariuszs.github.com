@@ -6,10 +6,10 @@
     <atom:link rel="self" href="http://mariuszs.github.io//feed.xml" type="application/rss+xml"></atom:link>
     <description>My corner of the Internet</description>
     <language>en-gb</language>
-    <pubDate>Pn, 3 lis 2014 17:00:01 +0100</pubDate>
+    <pubDate>Pn, 3 lis 2014 21:20:26 +0100</pubDate>
     <item>
       <title>Skype for Fedora 21</title>
-      <link>http://jonathanbullock.comblog/2014/skype.html</link>
+      <link>http://jonathanbullock.comblog/2014/skype_for_fedora_21.html</link>
       <description><![CDATA[<h2>Prepare rpm building environment</h2><p>Install the rpm building environment as shown here: <a href="http://fedoraproject.org/wiki/How_to_create_an_RPM_package#SPEC_example">How to create an RPM package</a></p>
 <pre><code>sudo yum install @development-tools
 sudo yum install fedora-packager
@@ -126,10 +126,10 @@ done
 <pre><code>rpmbuild -ba --target=i686 ~/rpmbuild/SPECS/skype.spec
 </code></pre><p>You will get <code>skype-4.3.0.37-1.fc21.i686.rpm</code> in <code>~/rpmbuild/RPMS/i686</code> directory</p><h2>Installation</h2>
 <pre><code>sudo yum localinstall ~/rpmbuild/RPMS/i686/skype-4.3.0.37-1.fc21.i686.rpm
-</code></pre><h2>Author</h2><p>This tutorial is based on excellent message from fedora mailing list: <a href="https://lists.fedoraproject.org/pipermail/users/2014-June/450773.html">The new skype-4.3.0.37 is out. Build your own rpm for Fedora 20</a>.<br/>All the glory goes to <em>Cristian Sava</em>.</p><h2>More</h2><p>Skype spec: <a href="https://github.com/mopsfelder/skype-rpm/blob/master/skype.spec">https://github.com/mopsfelder/skype-rpm/blob/master/skype.spec</a></p>]]>
+</code></pre><h2>Authors</h2><p>This tutorial is based on excellent instruction from fedora mailing list: <a href="https://lists.fedoraproject.org/pipermail/users/2014-June/450773.html">The new skype-4.3.0.37 is out. Build your own rpm for Fedora 20</a>.<br/>All the glory goes to <em>Cristian Sava</em> and <a href="https://github.com/mopsfelder/skype-rpm/"><em>Murilo Opsfelder Araujo</em></a>.</p>]]>
       </description>
       <pubDate>Pn, 3 lis 2014 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/2014/skype.html</guid>
+      <guid isPermaLink="false">blog/2014/skype_for_fedora_21.html</guid>
     </item>
     <item>
       <title>Continuous Delivery with Maven and Jenkins</title>

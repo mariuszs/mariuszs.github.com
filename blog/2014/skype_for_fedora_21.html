@@ -3,7 +3,7 @@
   <html>
     <head>
       <meta charset="utf-8">
-      <title>SSLv3 Poodle Verification
+      <title>Skype for Fedora 21
       </title>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,107 +53,145 @@
       <div class="row">
         <div class="col-sm-9 blog-main">
           <div class="blog-post">
-            <h2 class="blog-post-title">SSLv3 Poodle Verification
+            <h2 class="blog-post-title">Skype for Fedora 21
             </h2>
             <p class="blog-post-meta">
               <div class="col-md-9">
-                <em>16 października 2014</em>
+                <em>03 listopada 2014</em>
               </div>
               <div class="col-md-3">
                 <div class="pull-right">
-                  <a href="https://plus.google.com/share?url=http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html" class="btn btn-social-icon btn-google-plus" target="_blank">
+                  <a href="https://plus.google.com/share?url=http://mariuszs.github.io/blog/2014/skype_for_fedora_21.html" class="btn btn-social-icon btn-google-plus" target="_blank">
                     <i class="fa fa-google-plus"></i>
                   </a>
-                  <a href="http://twitter.com/share?url=http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html&amp;text=SSLv3 Poodle Verification" class="btn btn-social-icon btn-twitter" target="_blank">
+                  <a href="http://twitter.com/share?url=http://mariuszs.github.io/blog/2014/skype_for_fedora_21.html&amp;text=Skype for Fedora 21" class="btn btn-social-icon btn-twitter" target="_blank">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </div>
               </div>
             </p>
-            <p><div class="paragraph">
-<p>I prefer <a href="http://nmap.org/">Nmap Security Scanner</a> to verify SSLv3 Poodle vulnerability (CVE-2014-3566), the command is very simple:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>nmap -p 443 --script +ssl-enum-ciphers YOUR.SERVER.ADDRESS.COM</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Sample result:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Starting Nmap 6.47 ( http://nmap.org ) at 2014-10-16 22:44 CEST
-Nmap scan report for YOUR.SERVER.ADDRESS.COM (XXX.XXX.XXX.XXX)
-Host is up (0.030s latency).
-rDNS record for XXX.XXX.XXX.XXX: static.XXX.XXX.XXX.XXX.address.com
-PORT    STATE SERVICE
-443/tcp open  https
-| ssl-enum-ciphers:
-|   SSLv3: No supported ciphers found                                           <i class="conum" data-value="1"></i><b>(1)</b>
-|   TLSv1.0:
-|     ciphers:
-|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
-|     compressors:
-|       NULL
-|   TLSv1.1:
-|     ciphers:
-|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
-|     compressors:
-|       NULL
-|   TLSv1.2:
-|     ciphers:
-|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA - strong
-|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 - strong
-|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 - strong
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA - strong
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 - strong
-|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 - strong
-|     compressors:
-|       NULL
-|_  least strength: strong
+            <p><h2>Prepare rpm building environment</h2><p>Install the rpm building environment as shown here: <a href="http://fedoraproject.org/wiki/How_to_create_an_RPM_package#SPEC_example">How to create an RPM package</a></p>
+<pre><code>sudo yum install @development-tools
+sudo yum install fedora-packager
+sudo usermod -a -G mock $USER
+rpmdev-setuptree
+</code></pre><h2>Download Skype</h2><p>Download Dynamic Skype from <a href="http://www.skype.com/en/download-skype/skype-for-computer/">http://www.skype.com/en/download-skype/skype-for-computer/</a></p>
+<pre><code>wget --trust-server-names -P ~/rpmbuild/SOURCES/ http://www.skype.com/go/getskype-linux-dynamic
+</code></pre><p>This tutorial is for <code>skype-4.3.0.37.tar.bz2</code>.</p><h2>Create desktop application shortcut for Skype</h2><p>In the <code>~/rpmbuild/SOURCES</code> make the file <code>skype.desktop</code> with this content:</p>
+<pre><code>[Desktop Entry]
+Name=Skype
+Comment=Skype Internet Telephony
+Exec=env PULSE_LATENCY_MSEC=60 skype %U
+Icon=skype.png
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Network;Application;
+MimeType=x-scheme-handler/skype;
+X-KDE-Protocols=skype
+</code></pre><h2>Create Skype RPM Specification</h2><p>In <code>~/rpmbuild/SPECS</code> create file <code>skype.spec</code> with this content:</p>
+<pre><code># skype.spec for skype-4.3.0.37 (x32)
+#
+# Build with: rpmbuild -ba --target=i686 skype.spec
+#
+# Original skype.spec for 4.2.0.11
+# https://github.com/mopsfelder/skype-rpm/blob/master/skype.spec
 
-Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds</pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>SSLv3 is not supported, we are safe!</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>OpenSSL has added support for TLS_FALLBACK_SCSV to allow applications to block the ability for a MITM attacker to force a protocol downgrade. Some client applications (such as browsers) will reconnect using a downgraded protocol to work around interoperability bugs in older servers. This could be exploited by an active man-in-the-middle to downgrade connections to SSL 3.0 even if both sides of the connection support higher protocols. SSL 3.0 contains a number of weaknesses including POODLE (CVE-2014-3566). See also <a href="https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00" class="bare">https://tools.ietf.org/html/draft-ietf-tls-downgrade-scsv-00</a> and <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf" class="bare">https://www.openssl.org/~bodo/ssl-poodle.pdf</a></p>
-</div>
-<div class="paragraph">
-<p>Fixed in OpenSSL 1.0.1j (Affected 1.0.1i, 1.0.1h, 1.0.1g, 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, 1.0.1)</p>
-</div>
-<div class="paragraph">
-<p>Fixed in OpenSSL 1.0.0o (Affected 1.0.0n, 1.0.0m, 1.0.0l, 1.0.0k, 1.0.0j, 1.0.0i, 1.0.0g, 1.0.0f, 1.0.0e, 1.0.0d, 1.0.0c, 1.0.0b, 1.0.0a, 1.0.0)</p>
-</div>
-<div class="paragraph">
-<p>Fixed in OpenSSL 0.9.8zc (Affected 0.9.8zb, 0.9.8za, 0.9.8y, 0.9.8x, 0.9.8w, 0.9.8v, 0.9.8u, 0.9.8t, 0.9.8s, 0.9.8r, 0.9.8q, 0.9.8p, 0.9.8o, 0.9.8n, 0.9.8m, 0.9.8l, 0.9.8k, 0.9.8j, 0.9.8i, 0.9.8h, 0.9.8g, 0.9.8f, 0.9.8e, 0.9.8d, 0.9.8c, 0.9.8b, 0.9.8a, 0.9.8)</p>
-</div>
-</td>
-</tr>
-</table>
-</div></p>
+#%global debug_package %{nil}
+
+Name: skype
+Version: 4.3.0.37
+Release: 1%{?dist}
+Summary: Skype is a free Internet telephony from Microsoft
+
+License: Commercial
+URL: http://www.skype.com/products/skype/linux/
+Source0: %{name}-%{version}.tar.bz2
+
+Requires: alsa-lib
+Requires: glibc
+Requires: libgcc
+Requires: libpng
+Requires: libX11
+Requires: libXext
+Requires: libXScrnSaver
+Requires: libXv
+Requires: libstdc++
+Requires: qt &gt;= 4.6
+Requires: qt-x11
+Requires: qtwebkit
+
+#ExcludeArch: x86_64
+#AutoReqProv: no
+
+%description
+Skype is a free Internet telephony from Microsoft.
+
+%prep
+%setup -q
+
+%build
+
+%install
+rm -rf %{buildroot}
+%{__mkdir_p} %{buildroot}
+%{__mkdir_p} %{buildroot}%{_bindir}
+%{__mkdir_p} %{buildroot}%{_datadir}/applications
+%{__mkdir_p} %{buildroot}%{_datadir}/%{name}
+%{__mkdir_p} %{buildroot}%{_sysconfdir}/dbus-1/system.d
+
+%{__cp} %{name} %{buildroot}%{_bindir}
+%{__cp} %{name}.conf %{buildroot}%{_sysconfdir}/dbus-1/system.d
+%{__cp} %{name}.desktop %{buildroot}%{_datadir}/applications
+
+# Resources
+for DIR in avatars lang sounds; do
+    %{__cp} -r $DIR %{buildroot}%{_datadir}/%{name}
+done
+
+# Icons
+for SIZE in 16 24 32 48 64 96 128 256; do
+    %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps
+    %{__cp} icons/SkypeBlue_${SIZE}x${SIZE}.png \
+        %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps/%{name}.png
+done
+
+%files
+%defattr(0755,root,root,0755)
+%{_bindir}/%{name}
+%defattr(0644,root,root,0755)
+%{_sysconfdir}/dbus-1/system.d/%{name}.conf
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/%{name}/avatars/*
+%{_datadir}/%{name}/lang/*
+%{_datadir}/%{name}/sounds/*
+%{_datadir}/icons/*
+%dir %{_datadir}/%{name}/avatars
+%dir %{_datadir}/%{name}/lang
+%dir %{_datadir}/%{name}/sounds
+%dir %{_datadir}/%{name}
+%doc LICENSE README third-party_attributions.txt
+
+%changelog
+* Fri Jun 20 2014 Cristian Sava &lt;cristis53 at gmail.com&gt; 4.3.0.37-1
+- Version 4.3.0.37 (i686) for Fedora 20
+
+* Thu Feb 26 2014 Cristian Sava &lt;cristis53 at gmail.com&gt; 4.2.0.13-1
+- Version 4.2.0.13 (i686) for Fedora 20
+
+* Wed Jul 31 2013 Murilo Opsfelder Araujo &lt;mopsfelder at gmail.com&gt;
+4.2.0.11-1
+- Initial version
+</code></pre><h2>Build skype RPM</h2>
+<pre><code>rpmbuild -ba --target=i686 ~/rpmbuild/SPECS/skype.spec
+</code></pre><p>You will get <code>skype-4.3.0.37-1.fc21.i686.rpm</code> in <code>~/rpmbuild/RPMS/i686</code> directory</p><h2>Installation</h2>
+<pre><code>sudo yum localinstall ~/rpmbuild/RPMS/i686/skype-4.3.0.37-1.fc21.i686.rpm
+</code></pre><h2>Authors</h2><p>This tutorial is based on excellent instruction from fedora mailing list: <a href="https://lists.fedoraproject.org/pipermail/users/2014-June/450773.html">The new skype-4.3.0.37 is out. Build your own rpm for Fedora 20</a>.<br/>All the glory goes to <em>Cristian Sava</em> and <a href="https://github.com/mopsfelder/skype-rpm/"><em>Murilo Opsfelder Araujo</em></a>.</p></p>
             <div id="disqus_thread"></div>
             <script type="text/javascript">var disqus_shortname = 'mariuszs';
-var disqus_identifier = 'blog/2014/sslv3-poodle-check.html';
-var disqus_title = 'SSLv3 Poodle Verification';
-var disqus_url = 'http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html';
+var disqus_identifier = 'blog/2014/skype_for_fedora_21.html';
+var disqus_title = 'Skype for Fedora 21';
+var disqus_url = 'http://mariuszs.github.io/blog/2014/skype_for_fedora_21.html';
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
