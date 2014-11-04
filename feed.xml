@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>JonathanBullock.com</title>
+    <title>mariuszs blog</title>
     <link>http://mariuszs.github.io/</link>
     <atom:link rel="self" href="http://mariuszs.github.io//feed.xml" type="application/rss+xml"></atom:link>
     <description>My corner of the Internet</description>
     <language>en-gb</language>
-    <pubDate>Pn, 3 lis 2014 22:50:59 +0100</pubDate>
+    <pubDate>Wt, 4 lis 2014 08:36:04 +0100</pubDate>
     <item>
       <title>Skype for Fedora 21</title>
-      <link>http://jonathanbullock.comblog/2014/skype_for_fedora_21.html</link>
+      <link>http://mariuszs.github.io/blog/2014/skype_for_fedora_21.html</link>
       <description><![CDATA[<h2>Prepare rpm building environment</h2><p>Install the rpm building environment as shown here: <a href="http://fedoraproject.org/wiki/How_to_create_an_RPM_package#SPEC_example">How to create an RPM package</a></p>
 <pre><code>sudo yum install @development-tools
 sudo yum install fedora-packager
@@ -133,7 +133,7 @@ done
     </item>
     <item>
       <title>Continuous Delivery with Maven and Jenkins</title>
-      <link>http://jonathanbullock.comblog/2014/continuous_deliver_with_maven_and_jenkins.html</link>
+      <link>http://mariuszs.github.io/blog/2014/continuous_deliver_with_maven_and_jenkins.html</link>
       <description><![CDATA[<div class="paragraph">
 <p><a href="http://www.tikalk.com/alm/thats-one-small-step-maven-giant-leap-continuous-delivery" class="bare">http://www.tikalk.com/alm/thats-one-small-step-maven-giant-leap-continuous-delivery</a></p>
 </div>]]>
@@ -143,7 +143,7 @@ done
     </item>
     <item>
       <title>SSLv3 Poodle Verification</title>
-      <link>http://jonathanbullock.comblog/2014/sslv3-poodle-check.html</link>
+      <link>http://mariuszs.github.io/blog/2014/sslv3-poodle-check.html</link>
       <description><![CDATA[<div class="paragraph">
 <p>I prefer <a href="http://nmap.org/">Nmap Security Scanner</a> to verify SSLv3 Poodle vulnerability (CVE-2014-3566), the command is very simple:</p>
 </div>
@@ -229,7 +229,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds</pre>
     </item>
     <item>
       <title>Java Geek Blog - jBake, Gradle and GitHub</title>
-      <link>http://jonathanbullock.comblog/2014/jbake_gradle_and_github.html</link>
+      <link>http://mariuszs.github.io/blog/2014/jbake_gradle_and_github.html</link>
       <description><![CDATA[<h1>Wymagania</h1>
 <ul>
   <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">JDK 1.8</a> lub nowsze, ale wersja 1.7 też jest będzie dobra</li>
@@ -377,7 +377,7 @@ git commit -m &quot;add publish settings&quot;
     </item>
     <item>
       <title>Default network address in VirtManager</title>
-      <link>http://jonathanbullock.comblog/2014/virtmanager_default_address.html</link>
+      <link>http://mariuszs.github.io/blog/2014/virtmanager_default_address.html</link>
       <description><![CDATA[<p>Changing default network address <code>192.168.122.x</code> in Virt Manager<br/>&ndash;</p>
 <pre><code>sudo virsh net-edit default 
 </code></pre><p>and replace all <code>192.168.122.</code> with <code>192.168.200.</code> or other ip number.</p>]]>
@@ -387,7 +387,7 @@ git commit -m &quot;add publish settings&quot;
     </item>
     <item>
       <title>Czcionki w Fedorze</title>
-      <link>http://jonathanbullock.comblog/2014/fedora-fonts.html</link>
+      <link>http://mariuszs.github.io/blog/2014/fedora-fonts.html</link>
       <description><![CDATA[<h2>Czcionki</h2><p>Silnik renderowania czcionek z włączonym renderowaniem subpikselowym - możemy go legalnie używać, ponieważ nie obowiązują w naszym kraju patenty na oprogramowanie.</p>
 <pre><code>sudo yum install freetype-freeworld
 </code></pre><p>Nie polecam korzystania z <a href="http://www.infinality.net/blog/">Infinality</a> projekt najwyraźniej nie jest już dłużej rozwijany (ostatnia wydanie jest z 2013-05-15). Pojawił się za to nowy projekt <a href="http://bohoomil.com/">http://bohoomil.com/</a>, aktualnie bez wsparcia dla Fedory. </p><p><a href="https://code.google.com/p/noto/">Google noto fonts</a></p>
@@ -481,7 +481,7 @@ Xft.rgba:   rgb
     </item>
     <item>
       <title>Informative Git Prompt with Fish</title>
-      <link>http://jonathanbullock.comblog/2013/informative_git_prompt.html</link>
+      <link>http://mariuszs.github.io/blog/2013/informative_git_prompt.html</link>
       <description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
