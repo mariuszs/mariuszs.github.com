@@ -3,14 +3,14 @@
   <html>
     <head>
       <meta charset="utf-8">
-      <title>Skype for Fedora 21
+      <title>catch-exception library has new home
       </title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <meta name="keywords" content="">
-      <meta name="generator" content="JBake">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="" name="description">
+      <meta content="" name="author">
+      <meta content="" name="keywords">
+      <meta content="JBake" name="generator">
       <!--Le styles-->
       <link rel="stylesheet" href="../../css/asciidoctor.css">
       <link rel="stylesheet" href="../../css/prettify.css">
@@ -53,145 +53,42 @@
       <div class="row">
         <div class="col-sm-9 blog-main">
           <div class="blog-post">
-            <h2 class="blog-post-title">Skype for Fedora 21
+            <h2 class="blog-post-title">catch-exception library has new home
             </h2>
-            <p class="blog-post-meta">
+            <div class="row">
               <div class="col-md-9">
-                <em>03 listopada 2014</em>
+                <p class="blog-post-meta">
+                  <em>08 listopad 2014</em>
+                </p>
               </div>
               <div class="col-md-3">
                 <div class="pull-right">
-                  <a href="https://plus.google.com/share?url=http://mariuszs.github.io/blog/2014/skype.html" class="btn btn-social-icon btn-google-plus" target="_blank">
+                  <a target="_blank" class="btn btn-social-icon btn-google-plus" href="https://plus.google.com/share?url=http://mariuszs.github.io/blog/2014/catch-exception.html">
                     <i class="fa fa-google-plus"></i>
                   </a>
-                  <a href="http://twitter.com/share?url=http://mariuszs.github.io/blog/2014/skype.html&amp;text=Skype for Fedora 21" class="btn btn-social-icon btn-twitter" target="_blank">
+                  <a target="_blank" class="btn btn-social-icon btn-twitter" href="http://twitter.com/share?url=http://mariuszs.github.io/blog/2014/catch-exception.html&amp;text=catch-exception library has new home">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </div>
               </div>
-            </p>
-            <p><h2>Prepare rpm building environment</h2><p>Install the rpm building environment as shown here: <a href="http://fedoraproject.org/wiki/How_to_create_an_RPM_package#SPEC_example">How to create an RPM package</a></p>
-<pre><code>sudo yum install @development-tools
-sudo yum install fedora-packager
-sudo usermod -a -G mock $USER
-rpmdev-setuptree
-</code></pre><h2>Download Skype</h2><p>Download Dynamic Skype from <a href="http://www.skype.com/en/download-skype/skype-for-computer/">http://www.skype.com/en/download-skype/skype-for-computer/</a></p>
-<pre><code>wget --trust-server-names -P ~/rpmbuild/SOURCES/ http://www.skype.com/go/getskype-linux-dynamic
-</code></pre><p>This tutorial is for <code>skype-4.3.0.37.tar.bz2</code>.</p><h2>Create desktop application shortcut for Skype</h2><p>In the <code>~/rpmbuild/SOURCES</code> make the file <code>skype.desktop</code> with this content:</p>
-<pre><code>[Desktop Entry]
-Name=Skype
-Comment=Skype Internet Telephony
-Exec=env PULSE_LATENCY_MSEC=60 skype %U
-Icon=skype.png
-Terminal=false
-Type=Application
-Encoding=UTF-8
-Categories=Network;Application;
-MimeType=x-scheme-handler/skype;
-X-KDE-Protocols=skype
-</code></pre><h2>Create Skype RPM Specification</h2><p>In <code>~/rpmbuild/SPECS</code> create file <code>skype.spec</code> with this content:</p>
-<pre><code># skype.spec for skype-4.3.0.37 (x32)
-#
-# Build with: rpmbuild -ba --target=i686 skype.spec
-#
-# Original skype.spec for 4.2.0.11
-# https://github.com/mopsfelder/skype-rpm/blob/master/skype.spec
-
-#%global debug_package %{nil}
-
-Name: skype
-Version: 4.3.0.37
-Release: 1%{?dist}
-Summary: Skype is a free Internet telephony from Microsoft
-
-License: Commercial
-URL: http://www.skype.com/products/skype/linux/
-Source0: %{name}-%{version}.tar.bz2
-
-Requires: alsa-lib
-Requires: glibc
-Requires: libgcc
-Requires: libpng
-Requires: libX11
-Requires: libXext
-Requires: libXScrnSaver
-Requires: libXv
-Requires: libstdc++
-Requires: qt &gt;= 4.6
-Requires: qt-x11
-Requires: qtwebkit
-
-#ExcludeArch: x86_64
-#AutoReqProv: no
-
-%description
-Skype is a free Internet telephony from Microsoft.
-
-%prep
-%setup -q
-
-%build
-
-%install
-rm -rf %{buildroot}
-%{__mkdir_p} %{buildroot}
-%{__mkdir_p} %{buildroot}%{_bindir}
-%{__mkdir_p} %{buildroot}%{_datadir}/applications
-%{__mkdir_p} %{buildroot}%{_datadir}/%{name}
-%{__mkdir_p} %{buildroot}%{_sysconfdir}/dbus-1/system.d
-
-%{__cp} %{name} %{buildroot}%{_bindir}
-%{__cp} %{name}.conf %{buildroot}%{_sysconfdir}/dbus-1/system.d
-%{__cp} %{name}.desktop %{buildroot}%{_datadir}/applications
-
-# Resources
-for DIR in avatars lang sounds; do
-    %{__cp} -r $DIR %{buildroot}%{_datadir}/%{name}
-done
-
-# Icons
-for SIZE in 16 24 32 48 64 96 128 256; do
-    %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps
-    %{__cp} icons/SkypeBlue_${SIZE}x${SIZE}.png \
-        %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps/%{name}.png
-done
-
-%files
-%defattr(0755,root,root,0755)
-%{_bindir}/%{name}
-%defattr(0644,root,root,0755)
-%{_sysconfdir}/dbus-1/system.d/%{name}.conf
-%{_datadir}/applications/%{name}.desktop
-%{_datadir}/%{name}/avatars/*
-%{_datadir}/%{name}/lang/*
-%{_datadir}/%{name}/sounds/*
-%{_datadir}/icons/*
-%dir %{_datadir}/%{name}/avatars
-%dir %{_datadir}/%{name}/lang
-%dir %{_datadir}/%{name}/sounds
-%dir %{_datadir}/%{name}
-%doc LICENSE README third-party_attributions.txt
-
-%changelog
-* Fri Jun 20 2014 Cristian Sava &lt;cristis53 at gmail.com&gt; 4.3.0.37-1
-- Version 4.3.0.37 (i686) for Fedora 20
-
-* Thu Feb 26 2014 Cristian Sava &lt;cristis53 at gmail.com&gt; 4.2.0.13-1
-- Version 4.2.0.13 (i686) for Fedora 20
-
-* Wed Jul 31 2013 Murilo Opsfelder Araujo &lt;mopsfelder at gmail.com&gt;
-4.2.0.11-1
-- Initial version
-</code></pre><h2>Build skype RPM</h2>
-<pre><code>rpmbuild -ba --target=i686 ~/rpmbuild/SPECS/skype.spec
-</code></pre><p>You will get <code>skype-4.3.0.37-1.fc21.i686.rpm</code> in <code>~/rpmbuild/RPMS/i686</code> directory</p><h2>Installation</h2>
-<pre><code>sudo yum localinstall ~/rpmbuild/RPMS/i686/skype-4.3.0.37-1.fc21.i686.rpm
-</code></pre><h2>Author</h2><p>This tutorial is based on excellent message from fedora mailing list: <a href="https://lists.fedoraproject.org/pipermail/users/2014-June/450773.html">The new skype-4.3.0.37 is out. Build your own rpm for Fedora 20</a>.<br/>All the glory goes to <em>Cristian Sava</em>.</p><h2>More</h2><p>Skype spec: <a href="https://github.com/mopsfelder/skype-rpm/blob/master/skype.spec">https://github.com/mopsfelder/skype-rpm/blob/master/skype.spec</a></p></p>
+            </div>
+            <p><p>Rod Woo, original author of <a href="https://code.google.com/p/catch-exception/">catch-exception</a> library decided to not support his project. This is related to Java 8&rsquo;s lambda expressions, which mostly simplified exception handling.</p><p>Because many projects and companies are still using Java 7, we want to fix some problems, like compatibility with AssertJ 1.7.0 and Mockito 1.10.0. We only want to maintain catch-exception and fix existing problems. Supported version was reborn at new home <a href="https://github.com/Codearte/catch-exception">https://github.com/Codearte/catch-exception</a>! We hope that the project will be equally as good as the original version.</p><p>For creating new projects built on Java 8 please do not use this library! There is good article about testing exception with Java8: <a href="http://blog.codeleak.pl/2014/07/junit-testing-exception-with-java-8-and-lambda-expressions.html">jUnit: Testing exception with java 8 and lambda expressions</a> by <a href="http://blog.codeleak.pl/p/author.html">Rafał Bobrowiec</a></p><p>Changes<br/>&mdash;</p>
+<ul>
+  <li><p>New project home <a href="https://github.com/Codearte/catch-exception">github.com/Codearte/catch-exception</a></p></li>
+  <li><p><a href="http://joel-costigliola.github.io/assertj/">AssertJ</a> was replaced by <a href="https://github.com/alexruiz/fest-assert-2.x">FEST Fluent Assertions</a>.<br/><a href="https://github.com/alexruiz/fest-assert-2.x">FEST Fluent Assertions</a> is dead project.</p></li>
+  <li><p>New class <code>com.googlecode.catchexception.apis.BDDCatchException</code> was introduced for BDD style exception handling. Naming convention is consistent with <code>BDDAssertions</code> and <code>BDDMockito</code>.</p></li>
+  <li><p>Class <code>com.googlecode.catchexception.apis.CatchExceptionAssertJ</code> was declared deprecated,<br/> use <code>com.googlecode.catchexception.apis.BDDCatchException</code> instead.</p></li>
+  <li><p>Class <code>com.googlecode.catchexception.apis.CatchExceptionBdd</code> was deprecated and replaced with <code>BDDCatchException</code>. Please switch FEST Fluent Assertion with AssertJ.</p></li>
+  <li><p>Added support for AssertJ 1.7.0</p></li>
+  <li><p>Added support for Mockito versions from 1.8.1 to 1.10.8</p></li>
+  <li><p><a href="http://groups.google.com/group/catch-exception-discuss">Discussion group</a> and <a href="http://code.google.com/p/catch-exception/issues/list">old issues page</a> was replaced by new <a href="https://github.com/Codearte/catch-exception/issues">Github Issues Page</a></p></li>
+  <li><p>Maven coordinates was changed from <a href="https://code.google.com/p/catch-exception/wiki/Installation">com.googlecode.catch-exception:catch-exception</a> to<br/><a href="https://maven-badges.herokuapp.com/maven-central/eu.codearte.catch-exception/catch-exception">eu.codearte.catch-exception:catch-exception</a></p></li>
+</ul></p>
             <div id="disqus_thread"></div>
             <script type="text/javascript">var disqus_shortname = 'mariuszs';
-var disqus_identifier = 'blog/2014/skype.html';
-var disqus_title = 'Skype for Fedora 21';
-var disqus_url = 'http://mariuszs.github.io/blog/2014/skype.html';
+var disqus_identifier = 'blog/2014/catch-exception.html';
+var disqus_title = 'catch-exception library has new home';
+var disqus_url = 'http://mariuszs.github.io/blog/2014/catch-exception.html';
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -207,7 +104,10 @@ var disqus_url = 'http://mariuszs.github.io/blog/2014/skype.html';
             <h4>Archive</h4>
             <ol class="list-unstyled">
               <li>
-                <a href="../../blog/2014/skype.html">Skype for Fedora 21</a>
+                <a href="../../blog/2014/catch-exception.html">catch-exception library has new home</a>
+              </li>
+              <li>
+                <a href="../../blog/2014/skype_for_fedora_21.html">Skype for Fedora 21</a>
               </li>
               <li>
                 <a href="../../blog/2014/sslv3-poodle-check.html">SSLv3 Poodle Verification</a>

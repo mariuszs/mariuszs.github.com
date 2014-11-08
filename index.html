@@ -5,12 +5,12 @@
       <meta charset="utf-8">
       <title>JBake
       </title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <meta name="keywords" content="">
-      <meta name="generator" content="JBake">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="" name="description">
+      <meta content="" name="author">
+      <meta content="" name="keywords">
+      <meta content="JBake" name="generator">
       <!--Le styles-->
       <link rel="stylesheet" href="css/asciidoctor.css">
       <link rel="stylesheet" href="css/prettify.css">
@@ -56,12 +56,37 @@
             <h2 class="blog-post-title">
               <Blog></Blog>
             </h2>
+            <a href="blog/2014/catch-exception.html">
+              <h1>catch-exception library has new home</h1>
+            </a>
+            <div class="row">
+              <div class="col-md-9">
+                <p class="blog-post-meta">08 listopad 2014</p>
+              </div>
+              <div class="col-md-3">
+                <p class="text-right">
+                  <a data-disqus-identifier="blog/2014/catch-exception.html" href="blog/2014/catch-exception.html#disqus_thread"></a>
+                </p>
+              </div>
+            </div>
+            <p><p>Rod Woo, original author of <a href="https://code.google.com/p/catch-exception/">catch-exception</a> library decided to not support his project. This is related to Java 8&rsquo;s lambda expressions, which mostly simplified exception handling.</p><p>Because many projects and companies are still using Java 7, we want to fix some problems, like compatibility with AssertJ 1.7.0 and Mockito 1.10.0. We only want to maintain catch-exception and fix existing problems. Supported version was reborn at new home <a href="https://github.com/Codearte/catch-exception">https://github.com/Codearte/catch-exception</a>! We hope that the project will be equally as good as the original version.</p><p>For creating new projects built on Java 8 please do not use this library! There is good article about testing exception with Java8: <a href="http://blog.codeleak.pl/2014/07/junit-testing-exception-with-java-8-and-lambda-expressions.html">jUnit: Testing exception with java 8 and lambda expressions</a> by <a href="http://blog.codeleak.pl/p/author.html">Rafał Bobrowiec</a></p><p>Changes<br/>&mdash;</p>
+<ul>
+  <li><p>New project home <a href="https://github.com/Codearte/catch-exception">github.com/Codearte/catch-exception</a></p></li>
+  <li><p><a href="http://joel-costigliola.github.io/assertj/">AssertJ</a> was replaced by <a href="https://github.com/alexruiz/fest-assert-2.x">FEST Fluent Assertions</a>.<br/><a href="https://github.com/alexruiz/fest-assert-2.x">FEST Fluent Assertions</a> is dead project.</p></li>
+  <li><p>New class <code>com.googlecode.catchexception.apis.BDDCatchException</code> was introduced for BDD style exception handling. Naming convention is consistent with <code>BDDAssertions</code> and <code>BDDMockito</code>.</p></li>
+  <li><p>Class <code>com.googlecode.catchexception.apis.CatchExceptionAssertJ</code> was declared deprecated,<br/> use <code>com.googlecode.catchexception.apis.BDDCatchException</code> instead.</p></li>
+  <li><p>Class <code>com.googlecode.catchexception.apis.CatchExceptionBdd</code> was deprecated and replaced with <code>BDDCatchException</code>. Please switch FEST Fluent Assertion with AssertJ.</p></li>
+  <li><p>Added support for AssertJ 1.7.0</p></li>
+  <li><p>Added support for Mockito versions from 1.8.1 to 1.10.8</p></li>
+  <li><p><a href="http://groups.google.com/group/catch-exception-discuss">Discussion group</a> and <a href="http://code.google.com/p/catch-exception/issues/list">old issues page</a> was replaced by new <a href="https://github.com/Codearte/catch-exception/issues">Github Issues Page</a></p></li>
+  <li><p>Maven coordinates was changed from <a href="https://code.google.com/p/catch-exception/wiki/Installation">com.googlecode.catch-exception:catch-exception</a> to<br/><a href="https://maven-badges.herokuapp.com/maven-central/eu.codearte.catch-exception/catch-exception">eu.codearte.catch-exception:catch-exception</a></p></li>
+</ul></p>
             <a href="blog/2014/skype_for_fedora_21.html">
               <h1>Skype for Fedora 21</h1>
             </a>
             <div class="row">
               <div class="col-md-9">
-                <p class="blog-post-meta">03 listopada 2014</p>
+                <p class="blog-post-meta">03 listopad 2014</p>
               </div>
               <div class="col-md-3">
                 <p class="text-right">
@@ -191,7 +216,7 @@ done
             </a>
             <div class="row">
               <div class="col-md-9">
-                <p class="blog-post-meta">16 października 2014</p>
+                <p class="blog-post-meta">16 październik 2014</p>
               </div>
               <div class="col-md-3">
                 <p class="text-right">
@@ -283,7 +308,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1.53 seconds</pre>
             </a>
             <div class="row">
               <div class="col-md-9">
-                <p class="blog-post-meta">12 października 2014</p>
+                <p class="blog-post-meta">12 październik 2014</p>
               </div>
               <div class="col-md-3">
                 <p class="text-right">
@@ -437,7 +462,7 @@ git commit -m &quot;add publish settings&quot;
             </a>
             <div class="row">
               <div class="col-md-9">
-                <p class="blog-post-meta">11 października 2014</p>
+                <p class="blog-post-meta">11 październik 2014</p>
               </div>
               <div class="col-md-3">
                 <p class="text-right">
@@ -537,7 +562,7 @@ Xft.rgba:   rgb
             </a>
             <div class="row">
               <div class="col-md-9">
-                <p class="blog-post-meta">03 grudnia 2013</p>
+                <p class="blog-post-meta">03 grudzień 2013</p>
               </div>
               <div class="col-md-3">
                 <p class="text-right">
@@ -715,6 +740,9 @@ set -g __fish_git_prompt_color_cleanstate green bold</pre>
           <div class="sidebar-module sidebar-module-inset">
             <h4>Archive</h4>
             <ol class="list-unstyled">
+              <li>
+                <a href="blog/2014/catch-exception.html">catch-exception library has new home</a>
+              </li>
               <li>
                 <a href="blog/2014/skype_for_fedora_21.html">Skype for Fedora 21</a>
               </li>
