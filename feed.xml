@@ -6,13 +6,13 @@
     <atom:link rel="self" type="application/rss+xml" href="http://mariuszs.github.io/feed.xml"></atom:link>
     <description>My corner of the Internet</description>
     <language>en-gb</language>
-    <pubDate>So, 8 lis 2014 12:32:53 +0100</pubDate>
+    <pubDate>So, 8 lis 2014 13:47:55 +0100</pubDate>
     <item>
       <title>catch-exception library has new home</title>
       <link>http://mariuszs.github.io/blog/2014/catch-exception.html</link>
       <description><![CDATA[<p>Rod Woo, the former author of <a href="https://code.google.com/p/catch-exception/">catch-exception</a> library decided to not maintenance his project. This is related to Java 8’s lambda expressions, which highly simplified exception handling.</p>
 <blockquote><p>+++ 2014-05-02: Java 8&rsquo;s lambda expressions will make catch-exception redundant. Therefore, this project won&rsquo;t be maintained any longer +++</p>
-</blockquote><p>Because many projects and companies are still using Java 7, we wanted to keep this project up to date, and fix some problems, like compatibility with AssertJ 1.7.0 and Mockito 1.10.0.<br/>We only wanted to maintain catch-exception and fix existing problems. Supported version was reborn at new home <a href="https://github.com/Codearte/catch-exception">https://github.com/Codearte/catch-exception</a>! We hope that the project will be as good as the original version.</p><p>Remember that for new projects based on Java 8, you can use lambda expression instead of this library. There is a good article about testing exception with Java8: <a href="http://blog.codeleak.pl/2014/07/junit-testing-exception-with-java-8-and-lambda-expressions.html">jUnit: Testing exception with java 8 and lambda expressions</a> by <a href="http://blog.codeleak.pl/p/author.html">Rafał Bobrowiec</a></p><h2>Changes</h2>
+</blockquote><p>Because many projects and companies are still using Java 7, we wanted to keep this project up to date, and  fix some problems, like compatibility with AssertJ 1.7.0 and Mockito 1.10.0. We only wanted to maintain catch-exception and fix existing problems. Supported version was reborn at new home <a href="https://github.com/Codearte/catch-exception">https://github.com/Codearte/catch-exception</a>! We hope that the project will be as good as the original version.</p><p>Remember that for new projects based on Java 8, you can use lambda expression instead of this library. There is a good article about testing exception with Java8: <a href="http://blog.codeleak.pl/2014/07/junit-testing-exception-with-java-8-and-lambda-expressions.html">jUnit: Testing exception with java 8 and lambda expressions</a> by <a href="http://blog.codeleak.pl/p/author.html">Rafał Bobrowiec</a></p><h2>Changes</h2>
 <ul>
   <li><p>New project home <a href="https://github.com/Codearte/catch-exception">github.com/Codearte/catch-exception</a></p></li>
   <li><p><a href="https://github.com/alexruiz/fest-assert-2.x">FEST Fluent Assertions</a> was replaced by <a href="http://joel-costigliola.github.io/assertj/">AssertJ</a>. <a href="https://github.com/alexruiz/fest-assert-2.x">FEST Fluent Assertions</a> is dead project.</p></li>
@@ -148,7 +148,7 @@ done
 <pre><code>rpmbuild -ba --target=i686 ~/rpmbuild/SPECS/skype.spec
 </code></pre><p>You will get <code>skype-4.3.0.37-1.fc21.i686.rpm</code> in <code>~/rpmbuild/RPMS/i686</code> directory</p><h2>Installation</h2>
 <pre><code>sudo yum localinstall ~/rpmbuild/RPMS/i686/skype-4.3.0.37-1.fc21.i686.rpm
-</code></pre><h2>Authors</h2><p>This tutorial is based on excellent instruction from fedora mailing list: <a href="https://lists.fedoraproject.org/pipermail/users/2014-June/450773.html">The new skype-4.3.0.37 is out. Build your own rpm for Fedora 20</a>.<br/>All the glory goes to <em>Cristian Sava</em> and <a href="https://github.com/mopsfelder/skype-rpm/"><em>Murilo Opsfelder Araujo</em></a>.</p>]]>
+</code></pre><h2>Authors</h2><p>This tutorial is based on excellent instruction from fedora mailing list: <a href="https://lists.fedoraproject.org/pipermail/users/2014-June/450773.html">The new skype-4.3.0.37 is out. Build your own rpm for Fedora 20</a>. All the glory goes to <em>Cristian Sava</em> and <a href="https://github.com/mopsfelder/skype-rpm/"><em>Murilo Opsfelder Araujo</em></a>.</p>]]>
       </description>
       <pubDate>Pn, 3 lis 2014 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">blog/2014/skype_for_fedora_21.html</guid>
@@ -400,7 +400,7 @@ git commit -m &quot;add publish settings&quot;
     <item>
       <title>Default network address in VirtManager</title>
       <link>http://mariuszs.github.io/blog/2014/virtmanager_default_address.html</link>
-      <description><![CDATA[<p>Changing default network address <code>192.168.122.x</code> in Virt Manager<br/>&ndash;</p>
+      <description><![CDATA[<p>Changing default network address <code>192.168.122.x</code> in Virt Manager &ndash;</p>
 <pre><code>sudo virsh net-edit default 
 </code></pre><p>and replace all <code>192.168.122.</code> with <code>192.168.200.</code> or other ip number.</p>]]>
       </description>
