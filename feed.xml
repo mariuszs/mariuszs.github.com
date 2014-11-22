@@ -3,10 +3,25 @@
   <channel>
     <title>mariuszs blog</title>
     <link>http://mariuszs.github.io/</link>
-    <atom:link rel="self" type="application/rss+xml" href="http://mariuszs.github.io/feed.xml"></atom:link>
+    <atom:link rel="self" href="http://mariuszs.github.io/feed.xml" type="application/rss+xml"></atom:link>
     <description>My corner of the Internet</description>
     <language>en-gb</language>
-    <pubDate>So, 8 lis 2014 15:54:33 +0100</pubDate>
+    <pubDate>So, 22 lis 2014 21:49:40 +0100</pubDate>
+    <item>
+      <title>Broken GPU Acceleration for Google Chrome on Intel</title>
+      <link>http://mariuszs.github.io/blog/2014/chrome-gpu-acceleration.html</link>
+      <description><![CDATA[<h2>Ugly fix</h2>
+<pre><code>set -x LIBGL_DRI3_DISABLE 1
+google-chrome
+</code></pre><h2>Result</h2><p><img src="/res/chrome-gpu.png" alt="alt text" title="chrome://gpu screen""/></p><h2>Source</h2>
+<ul>
+  <li><a href="http://keithp.com/blogs/chromium-dri3/">http://keithp.com/blogs/chromium-dri3/</a></li>
+  <li><a href="https://code.google.com/p/chromium/issues/detail?id=415681">https://code.google.com/p/chromium/issues/detail?id=415681</a></li>
+</ul>]]>
+      </description>
+      <pubDate>So, 22 lis 2014 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2014/chrome-gpu-acceleration.html</guid>
+    </item>
     <item>
       <title>catch-exception library has new home</title>
       <link>http://mariuszs.github.io/blog/2014/catch-exception.html</link>
