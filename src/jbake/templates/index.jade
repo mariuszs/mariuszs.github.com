@@ -4,19 +4,15 @@ block title
   Blog
 
 block content
-  each post in published_posts
-    a(href="#{post.uri}")
-      h1 #{post.title}
-    div.row
-      div.col-md-9
-        p.blog-post-meta #{dates.format(post.date,"dd MMMM yyyy")}
-      div.col-md-3
-        p.text-right
-          a(href="#{post.uri}#disqus_thread", data-disqus-identifier="#{post.uri}")
+  each post, index in published_posts
+    if index < 3
+      div.blog-post
+        a(href="#{post.uri}")
+          h2.blog-post-title #{post.title}
+        p.blog-post-meta
+          em #{dates.format(post.date,"dd MMMM yyyy")}
 
-    p !{post.body}
-
-  hr
+        p !{post.body}
 
   p Older posts are available in the <a href="archive.html" shape="rect">archive</a>.
 

@@ -1,0 +1,12 @@
+= Continuous Delivery with Maven and Jenkins
+Mariusz Smykuła
+2014-10-26
+:jbake-type: post
+:jbake-tags: continuous delivery, jenkins, maven
+:jbake-status: draft
+:source-highlighter: prettify
+:id: continuous-delivery-with-maven-and-jenkins
+:icons: font
+
+
+http://www.tikalk.com/alm/thats-one-small-step-maven-giant-leap-continuous-delivery

@@ -1,9 +1,9 @@
 doctype xml
 rss(version='2.0', xmlns:atom='http://www.w3.org/2005/Atom')
   channel
-    title JonathanBullock.com
+    title mariuszs blog
     link #{config.site_host}
-    atom:link(href='#{config.site_host}/feed.xml', rel="self", type='application/rss+xml')
+    atom:link(href='#{config.site_host}feed.xml', rel="self", type='application/rss+xml')
     description My corner of the Internet
     language en-gb
     pubDate #{dates.format(published_date,"EEE, d MMM yyyy HH:mm:ss Z")}
@@ -12,7 +12,7 @@ rss(version='2.0', xmlns:atom='http://www.w3.org/2005/Atom')
     each post in posts
       item
         title #{post.title}
-        link http://jonathanbullock.com#{post.uri}
+        link #{config.site_host}#{post.uri}
         description
           <![CDATA[!{post.body}]]>
         pubDate #{dates.format(post.date, "EEE, d MMM yyyy HH:mm:ss Z")}
