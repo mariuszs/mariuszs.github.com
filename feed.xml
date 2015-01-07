@@ -6,7 +6,7 @@
     <atom:link rel="self" type="application/rss+xml" href="http://mariuszs.github.io/feed.xml"></atom:link>
     <description>My corner of the Internet</description>
     <language>en-gb</language>
-    <pubDate>Śr, 7 sty 2015 21:08:04 +0100</pubDate>
+    <pubDate>Śr, 7 sty 2015 21:58:45 +0100</pubDate>
     <item>
       <title>Broken GPU Acceleration for Google Chrome on Intel</title>
       <link>http://mariuszs.github.io/blog/2014/chrome-gpu-acceleration.html</link>
@@ -66,7 +66,7 @@ Encoding=UTF-8
 Categories=Network;Application;
 MimeType=x-scheme-handler/skype;
 X-KDE-Protocols=skype
-</code></pre><h2>Create Skype RPM Specification</h2><p>In <code>~/rpmbuild/SPECS</code> create file <a href="https://gist.github.com/mariuszs/fcd95de0697aa9133d01">skype.spec</a> with this content:</p>
+</code></pre><h2>Create Skype RPM Specification</h2><p>In <code>~/rpmbuild/SPECS</code> create file <a href="https://gist.githubusercontent.com/mariuszs/fcd95de0697aa9133d01/raw/bcbae35b2221fd39848d8584527b2553f6fd16d0/skype.spec">skype.spec</a> with this content:</p>
 <pre><code># skype.spec for skype-4.3.0.37 (x32)
 #
 # Build with: rpmbuild -ba --target=i686 skype.spec
