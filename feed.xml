@@ -3,14 +3,14 @@
   <channel>
     <title>mariuszs blog</title>
     <link>http://mariuszs.github.io/</link>
-    <atom:link rel="self" href="http://mariuszs.github.io/feed.xml" type="application/rss+xml"></atom:link>
+    <atom:link rel="self" type="application/rss+xml" href="http://mariuszs.github.io/feed.xml"></atom:link>
     <description>My corner of the Internet</description>
     <language>en-gb</language>
-    <pubDate>So, 22 lis 2014 21:49:40 +0100</pubDate>
+    <pubDate>Śr, 7 sty 2015 21:08:04 +0100</pubDate>
     <item>
       <title>Broken GPU Acceleration for Google Chrome on Intel</title>
       <link>http://mariuszs.github.io/blog/2014/chrome-gpu-acceleration.html</link>
-      <description><![CDATA[<h2>Ugly fix</h2>
+      <description><![CDATA[<h2>Update</h2><p>This issue is already fixed in Google Chrome Beta (40.0.2214.45 beta).</p><h2><del>Ugly fix</del></h2>
 <pre><code>set -x LIBGL_DRI3_DISABLE 1
 google-chrome
 </code></pre><h2>Result</h2><p><img src="/res/chrome-gpu.png" alt="alt text" title="chrome://gpu screen""/></p><h2>Source</h2>
@@ -66,7 +66,7 @@ Encoding=UTF-8
 Categories=Network;Application;
 MimeType=x-scheme-handler/skype;
 X-KDE-Protocols=skype
-</code></pre><h2>Create Skype RPM Specification</h2><p>In <code>~/rpmbuild/SPECS</code> create file <code>skype.spec</code> with this content:</p>
+</code></pre><h2>Create Skype RPM Specification</h2><p>In <code>~/rpmbuild/SPECS</code> create file <a href="https://gist.github.com/mariuszs/fcd95de0697aa9133d01">skype.spec</a> with this content:</p>
 <pre><code># skype.spec for skype-4.3.0.37 (x32)
 #
 # Build with: rpmbuild -ba --target=i686 skype.spec
@@ -128,7 +128,7 @@ done
 
 # Icons
 for SIZE in 16 24 32 48 64 96 128 256; do
-    %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps
+    %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x${SIZE}/apps
     %{__cp} icons/SkypeBlue_${SIZE}x${SIZE}.png \
         %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps/%{name}.png
 done

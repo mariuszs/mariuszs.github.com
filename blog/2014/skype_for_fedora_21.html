@@ -5,12 +5,12 @@
       <meta charset="utf-8">
       <title>Skype for Fedora 21
       </title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <meta name="keywords" content="">
-      <meta name="generator" content="JBake">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="" name="description">
+      <meta content="" name="author">
+      <meta content="" name="keywords">
+      <meta content="JBake" name="generator">
       <!--Le styles-->
       <link rel="stylesheet" href="../../css/asciidoctor.css">
       <link rel="stylesheet" href="../../css/prettify.css">
@@ -58,15 +58,15 @@
             <div class="row">
               <div class="col-md-9">
                 <p class="blog-post-meta">
-                  <em>03 listopada 2014</em>
+                  <em>03 listopad 2014</em>
                 </p>
               </div>
               <div class="col-md-3">
                 <div class="pull-right">
-                  <a href="https://plus.google.com/share?url=http://mariuszs.github.io/blog/2014/skype_for_fedora_21.html" class="btn btn-social-icon btn-google-plus" target="_blank">
+                  <a target="_blank" class="btn btn-social-icon btn-google-plus" href="https://plus.google.com/share?url=http://mariuszs.github.io/blog/2014/skype_for_fedora_21.html">
                     <i class="fa fa-google-plus"></i>
                   </a>
-                  <a href="http://twitter.com/share?url=http://mariuszs.github.io/blog/2014/skype_for_fedora_21.html&amp;text=Skype for Fedora 21" class="btn btn-social-icon btn-twitter" target="_blank">
+                  <a target="_blank" class="btn btn-social-icon btn-twitter" href="http://twitter.com/share?url=http://mariuszs.github.io/blog/2014/skype_for_fedora_21.html&amp;text=Skype for Fedora 21">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </div>
@@ -91,7 +91,7 @@ Encoding=UTF-8
 Categories=Network;Application;
 MimeType=x-scheme-handler/skype;
 X-KDE-Protocols=skype
-</code></pre><h2>Create Skype RPM Specification</h2><p>In <code>~/rpmbuild/SPECS</code> create file <code>skype.spec</code> with this content:</p>
+</code></pre><h2>Create Skype RPM Specification</h2><p>In <code>~/rpmbuild/SPECS</code> create file <a href="https://gist.github.com/mariuszs/fcd95de0697aa9133d01">skype.spec</a> with this content:</p>
 <pre><code># skype.spec for skype-4.3.0.37 (x32)
 #
 # Build with: rpmbuild -ba --target=i686 skype.spec
@@ -153,7 +153,7 @@ done
 
 # Icons
 for SIZE in 16 24 32 48 64 96 128 256; do
-    %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps
+    %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x${SIZE}/apps
     %{__cp} icons/SkypeBlue_${SIZE}x${SIZE}.png \
         %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps/%{name}.png
 done
