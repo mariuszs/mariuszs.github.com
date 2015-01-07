@@ -45,7 +45,7 @@ In the `~/rpmbuild/SOURCES` make the file `skype.desktop` with this content:
 Create Skype RPM Specification
 ----
 
-In `~/rpmbuild/SPECS` create file `skype.spec` with this content:
+In `~/rpmbuild/SPECS` create file [skype.spec](https://gist.github.com/mariuszs/fcd95de0697aa9133d01) with this content:
 
     # skype.spec for skype-4.3.0.37 (x32)
     #
@@ -108,7 +108,7 @@ In `~/rpmbuild/SPECS` create file `skype.spec` with this content:
 
     # Icons
     for SIZE in 16 24 32 48 64 96 128 256; do
-        %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps
+        %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x${SIZE}/apps
         %{__cp} icons/SkypeBlue_${SIZE}x${SIZE}.png \
             %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps/%{name}.png
     done

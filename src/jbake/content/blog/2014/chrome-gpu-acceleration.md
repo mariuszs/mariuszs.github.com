@@ -5,7 +5,12 @@ tags=blog, chrome, intel, dri, gpu
 status=published
 ~~~~~~
 
-Ugly fix
+Update
+----
+
+This issue is already fixed in Google Chrome Beta (40.0.2214.45 beta).
+
+<del>Ugly fix</del>
 ----
 
     set -x LIBGL_DRI3_DISABLE 1
