@@ -185,7 +185,7 @@ done
 for SIZE in 16 24 32 48 64 96 128 256; do
     %{__mkdir_p} %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x${SIZE}/apps
     %{__cp} icons/SkypeBlue_${SIZE}x${SIZE}.png \
-        %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x ${SIZE}/apps/%{name}.png
+        %{buildroot}%{_datadir}/icons/hicolor/${SIZE}x${SIZE}/apps/%{name}.png
 done
 
 %files
